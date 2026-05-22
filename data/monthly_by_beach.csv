@@ -1,0 +1,433 @@
+site_name,month,month_name,avg_enterococci,samples,poor_pct
+Altona,1,Jan,86.25,28,10.71
+Altona,2,Feb,125.92,26,3.85
+Altona,3,Mar,13.69,13,0.0
+Altona,4,Apr,517.22,9,11.11
+Altona,5,May,17.33,6,0.0
+Altona,6,Jun,31.38,8,0.0
+Altona,7,Jul,12.75,4,0.0
+Altona,8,Aug,42.5,4,0.0
+Altona,9,Sep,22.5,8,0.0
+Altona,10,Oct,28.67,9,0.0
+Altona,11,Nov,352.18,11,9.09
+Altona,12,Dec,103.88,24,29.17
+Aspendale Life Saving Club,1,Jan,41.04,28,7.14
+Aspendale Life Saving Club,2,Feb,22.84,25,0.0
+Aspendale Life Saving Club,3,Mar,115.08,13,7.69
+Aspendale Life Saving Club,4,Apr,223.56,9,11.11
+Aspendale Life Saving Club,5,May,18.83,6,0.0
+Aspendale Life Saving Club,6,Jun,35.0,8,0.0
+Aspendale Life Saving Club,7,Jul,133.75,4,25.0
+Aspendale Life Saving Club,8,Aug,5.0,4,0.0
+Aspendale Life Saving Club,9,Sep,52.5,8,12.5
+Aspendale Life Saving Club,10,Oct,27.9,10,0.0
+Aspendale Life Saving Club,11,Nov,238.91,11,27.27
+Aspendale Life Saving Club,12,Dec,123.21,24,8.33
+Beaumaris,1,Jan,77.07,28,7.14
+Beaumaris,2,Feb,71.72,25,4.0
+Beaumaris,3,Mar,91.85,13,7.69
+Beaumaris,4,Apr,196.89,9,11.11
+Beaumaris,5,May,106.0,6,16.67
+Beaumaris,6,Jun,106.38,8,12.5
+Beaumaris,7,Jul,12.75,4,0.0
+Beaumaris,8,Aug,20.5,4,0.0
+Beaumaris,9,Sep,40.25,8,12.5
+Beaumaris,10,Oct,29.89,9,0.0
+Beaumaris,11,Nov,81.0,11,18.18
+Beaumaris,12,Dec,91.0,24,16.67
+Black Rock Life Saving Club,1,Jan,26.04,28,0.0
+Black Rock Life Saving Club,2,Feb,34.88,25,4.0
+Black Rock Life Saving Club,3,Mar,21.46,13,0.0
+Black Rock Life Saving Club,4,Apr,259.44,9,22.22
+Black Rock Life Saving Club,5,May,15.17,6,0.0
+Black Rock Life Saving Club,6,Jun,27.62,8,0.0
+Black Rock Life Saving Club,7,Jul,7.5,4,0.0
+Black Rock Life Saving Club,8,Aug,5.0,4,0.0
+Black Rock Life Saving Club,9,Sep,43.38,8,12.5
+Black Rock Life Saving Club,10,Oct,11.33,9,0.0
+Black Rock Life Saving Club,11,Nov,39.6,10,0.0
+Black Rock Life Saving Club,12,Dec,31.22,23,0.0
+Blairgowrie,1,Jan,43.11,28,3.57
+Blairgowrie,2,Feb,28.64,25,4.0
+Blairgowrie,3,Mar,26.17,12,0.0
+Blairgowrie,4,Apr,775.56,9,11.11
+Blairgowrie,5,May,41.83,6,0.0
+Blairgowrie,6,Jun,36.5,8,0.0
+Blairgowrie,7,Jul,17.75,4,0.0
+Blairgowrie,8,Aug,6.25,4,0.0
+Blairgowrie,9,Sep,261.88,8,12.5
+Blairgowrie,10,Oct,67.3,10,20.0
+Blairgowrie,11,Nov,164.36,11,27.27
+Blairgowrie,12,Dec,504.46,24,12.5
+Brighton Life Saving Club,1,Jan,49.79,24,0.0
+Brighton Life Saving Club,2,Feb,23.05,21,0.0
+Brighton Life Saving Club,3,Mar,66.27,11,9.09
+Brighton Life Saving Club,4,Apr,269.7,10,10.0
+Brighton Life Saving Club,5,May,21.0,6,0.0
+Brighton Life Saving Club,6,Jun,50.25,8,0.0
+Brighton Life Saving Club,7,Jul,97.5,4,25.0
+Brighton Life Saving Club,8,Aug,7.5,4,0.0
+Brighton Life Saving Club,9,Sep,49.38,8,0.0
+Brighton Life Saving Club,10,Oct,25.78,9,0.0
+Brighton Life Saving Club,11,Nov,221.73,11,18.18
+Brighton Life Saving Club,12,Dec,152.6,20,10.0
+Canadian Bay,1,Jan,66.39,28,7.14
+Canadian Bay,2,Feb,29.0,25,4.0
+Canadian Bay,3,Mar,46.23,13,7.69
+Canadian Bay,4,Apr,253.5,10,20.0
+Canadian Bay,5,May,75.33,6,16.67
+Canadian Bay,6,Jun,552.0,8,25.0
+Canadian Bay,7,Jul,176.5,4,25.0
+Canadian Bay,8,Aug,435.0,4,25.0
+Canadian Bay,9,Sep,17.62,8,0.0
+Canadian Bay,10,Oct,709.6,10,30.0
+Canadian Bay,11,Nov,54.82,11,9.09
+Canadian Bay,12,Dec,129.04,24,25.0
+Carrum Surf Life Saving Club,1,Jan,203.34,29,3.45
+Carrum Surf Life Saving Club,2,Feb,11.92,25,0.0
+Carrum Surf Life Saving Club,3,Mar,45.46,13,7.69
+Carrum Surf Life Saving Club,4,Apr,2539.91,11,36.36
+Carrum Surf Life Saving Club,5,May,37.67,6,0.0
+Carrum Surf Life Saving Club,6,Jun,169.12,8,12.5
+Carrum Surf Life Saving Club,7,Jul,41.5,4,0.0
+Carrum Surf Life Saving Club,8,Aug,482.5,4,50.0
+Carrum Surf Life Saving Club,9,Sep,375.75,8,25.0
+Carrum Surf Life Saving Club,10,Oct,65.2,10,10.0
+Carrum Surf Life Saving Club,11,Nov,186.45,11,36.36
+Carrum Surf Life Saving Club,12,Dec,453.71,24,29.17
+Dromana,1,Jan,42.89,28,0.0
+Dromana,2,Feb,10.0,25,0.0
+Dromana,3,Mar,35.0,13,7.69
+Dromana,4,Apr,149.56,9,22.22
+Dromana,5,May,93.67,6,16.67
+Dromana,6,Jun,211.25,8,12.5
+Dromana,7,Jul,111.25,4,25.0
+Dromana,8,Aug,257.5,4,25.0
+Dromana,9,Sep,91.38,8,12.5
+Dromana,10,Oct,388.1,10,10.0
+Dromana,11,Nov,151.36,11,36.36
+Dromana,12,Dec,278.38,24,16.67
+Eastern Beach,1,Jan,115.2,30,16.67
+Eastern Beach,2,Feb,43.04,25,4.0
+Eastern Beach,3,Mar,86.79,14,7.14
+Eastern Beach,4,Apr,167.44,9,22.22
+Eastern Beach,5,May,115.75,8,25.0
+Eastern Beach,6,Jun,88.0,8,12.5
+Eastern Beach,7,Jul,24.75,4,0.0
+Eastern Beach,8,Aug,15.25,4,0.0
+Eastern Beach,9,Sep,108.25,8,12.5
+Eastern Beach,10,Oct,320.1,10,10.0
+Eastern Beach,11,Nov,49.09,11,0.0
+Eastern Beach,12,Dec,118.58,24,12.5
+Elwood,1,Jan,135.04,27,11.11
+Elwood,2,Feb,37.12,25,4.0
+Elwood,3,Mar,39.23,13,0.0
+Elwood,4,Apr,193.67,9,22.22
+Elwood,5,May,73.33,6,16.67
+Elwood,6,Jun,50.88,8,0.0
+Elwood,7,Jul,483.75,4,25.0
+Elwood,8,Aug,5.0,4,0.0
+Elwood,9,Sep,45.75,8,0.0
+Elwood,10,Oct,14.22,9,0.0
+Elwood,11,Nov,249.36,11,36.36
+Elwood,12,Dec,173.75,24,25.0
+Frankston Coast Guard,1,Jan,45.54,28,3.57
+Frankston Coast Guard,2,Feb,36.54,24,4.17
+Frankston Coast Guard,3,Mar,88.46,13,15.38
+Frankston Coast Guard,4,Apr,211.78,9,22.22
+Frankston Coast Guard,5,May,83.33,6,16.67
+Frankston Coast Guard,6,Jun,3227.88,8,37.5
+Frankston Coast Guard,7,Jul,1321.0,4,25.0
+Frankston Coast Guard,8,Aug,996.5,4,25.0
+Frankston Coast Guard,9,Sep,211.0,8,12.5
+Frankston Coast Guard,10,Oct,1361.1,10,20.0
+Frankston Coast Guard,11,Nov,98.73,11,9.09
+Frankston Coast Guard,12,Dec,343.08,24,29.17
+Frankston Surf Life Saving Club,1,Jan,80.29,28,10.71
+Frankston Surf Life Saving Club,2,Feb,36.93,27,3.7
+Frankston Surf Life Saving Club,3,Mar,128.0,13,15.38
+Frankston Surf Life Saving Club,4,Apr,978.89,9,22.22
+Frankston Surf Life Saving Club,5,May,114.5,6,16.67
+Frankston Surf Life Saving Club,6,Jun,235.62,8,37.5
+Frankston Surf Life Saving Club,7,Jul,1331.5,4,50.0
+Frankston Surf Life Saving Club,8,Aug,243.75,4,25.0
+Frankston Surf Life Saving Club,9,Sep,370.5,8,25.0
+Frankston Surf Life Saving Club,10,Oct,106.3,10,20.0
+Frankston Surf Life Saving Club,11,Nov,614.82,11,54.55
+Frankston Surf Life Saving Club,12,Dec,397.83,24,37.5
+Half Moon Bay,1,Jan,43.46,28,3.57
+Half Moon Bay,2,Feb,30.92,25,0.0
+Half Moon Bay,3,Mar,79.0,14,14.29
+Half Moon Bay,4,Apr,221.89,9,11.11
+Half Moon Bay,5,May,9.33,6,0.0
+Half Moon Bay,6,Jun,53.0,8,0.0
+Half Moon Bay,7,Jul,47.0,4,0.0
+Half Moon Bay,8,Aug,6.25,4,0.0
+Half Moon Bay,9,Sep,67.75,8,12.5
+Half Moon Bay,10,Oct,43.78,9,0.0
+Half Moon Bay,11,Nov,92.6,10,20.0
+Half Moon Bay,12,Dec,54.71,24,8.33
+Hampton,1,Jan,39.32,28,3.57
+Hampton,2,Feb,37.42,26,7.69
+Hampton,3,Mar,50.92,13,7.69
+Hampton,4,Apr,415.67,9,22.22
+Hampton,5,May,71.83,6,16.67
+Hampton,6,Jun,42.0,8,12.5
+Hampton,7,Jul,138.75,4,25.0
+Hampton,8,Aug,5.0,4,0.0
+Hampton,9,Sep,35.75,8,12.5
+Hampton,10,Oct,52.33,9,11.11
+Hampton,11,Nov,624.73,11,27.27
+Hampton,12,Dec,67.74,23,13.04
+Mentone,1,Jan,339.25,28,35.71
+Mentone,2,Feb,95.12,25,8.0
+Mentone,3,Mar,64.77,13,7.69
+Mentone,4,Apr,145.78,9,11.11
+Mentone,5,May,46.0,6,0.0
+Mentone,6,Jun,164.25,8,37.5
+Mentone,7,Jul,122.0,5,20.0
+Mentone,8,Aug,10.0,4,0.0
+Mentone,9,Sep,32.62,8,0.0
+Mentone,10,Oct,51.67,9,0.0
+Mentone,11,Nov,172.55,11,18.18
+Mentone,12,Dec,232.83,24,37.5
+Mordialloc,1,Jan,309.39,28,32.14
+Mordialloc,2,Feb,34.24,25,0.0
+Mordialloc,3,Mar,74.23,13,15.38
+Mordialloc,4,Apr,159.1,10,10.0
+Mordialloc,5,May,38.0,6,0.0
+Mordialloc,6,Jun,112.5,8,12.5
+Mordialloc,7,Jul,226.25,4,25.0
+Mordialloc,8,Aug,5.0,4,0.0
+Mordialloc,9,Sep,55.75,8,0.0
+Mordialloc,10,Oct,21.11,9,0.0
+Mordialloc,11,Nov,178.82,11,18.18
+Mordialloc,12,Dec,109.87,23,17.39
+Mornington Life Saving Club,1,Jan,69.96,28,7.14
+Mornington Life Saving Club,2,Feb,48.0,25,4.0
+Mornington Life Saving Club,3,Mar,343.46,13,15.38
+Mornington Life Saving Club,4,Apr,745.67,9,11.11
+Mornington Life Saving Club,5,May,40.5,6,0.0
+Mornington Life Saving Club,6,Jun,1071.82,11,36.36
+Mornington Life Saving Club,7,Jul,19.25,4,0.0
+Mornington Life Saving Club,8,Aug,16.75,4,0.0
+Mornington Life Saving Club,9,Sep,57.75,8,0.0
+Mornington Life Saving Club,10,Oct,79.8,10,10.0
+Mornington Life Saving Club,11,Nov,1188.0,11,27.27
+Mornington Life Saving Club,12,Dec,367.0,24,20.83
+Mt Martha Life Saving Club,1,Jan,19.04,28,0.0
+Mt Martha Life Saving Club,2,Feb,10.96,25,0.0
+Mt Martha Life Saving Club,3,Mar,32.31,13,0.0
+Mt Martha Life Saving Club,4,Apr,47.89,9,11.11
+Mt Martha Life Saving Club,5,May,32.33,6,0.0
+Mt Martha Life Saving Club,6,Jun,30.25,8,0.0
+Mt Martha Life Saving Club,7,Jul,7.5,4,0.0
+Mt Martha Life Saving Club,8,Aug,29.5,4,0.0
+Mt Martha Life Saving Club,9,Sep,14.75,8,0.0
+Mt Martha Life Saving Club,10,Oct,6.0,10,0.0
+Mt Martha Life Saving Club,11,Nov,208.18,11,36.36
+Mt Martha Life Saving Club,12,Dec,246.77,22,13.64
+Port Melbourne,1,Jan,312.28,29,24.14
+Port Melbourne,2,Feb,55.88,25,4.0
+Port Melbourne,3,Mar,1332.69,13,7.69
+Port Melbourne,4,Apr,765.11,9,22.22
+Port Melbourne,5,May,57.5,6,16.67
+Port Melbourne,6,Jun,152.5,8,25.0
+Port Melbourne,7,Jul,480.0,4,25.0
+Port Melbourne,8,Aug,20.25,4,0.0
+Port Melbourne,9,Sep,241.62,8,25.0
+Port Melbourne,10,Oct,413.11,9,22.22
+Port Melbourne,11,Nov,278.73,11,27.27
+Port Melbourne,12,Dec,341.58,24,25.0
+Portarlington Beach (new site),1,Jan,67.79,34,5.88
+Portarlington Beach (new site),2,Feb,37.86,28,0.0
+Portarlington Beach (new site),3,Mar,58.06,17,5.88
+Portarlington Beach (new site),4,Apr,36.23,13,0.0
+Portarlington Beach (new site),5,May,16.62,8,0.0
+Portarlington Beach (new site),6,Jun,27.5,8,0.0
+Portarlington Beach (new site),7,Jul,77.5,4,25.0
+Portarlington Beach (new site),8,Aug,6.25,4,0.0
+Portarlington Beach (new site),9,Sep,32.12,8,0.0
+Portarlington Beach (new site),10,Oct,154.82,11,9.09
+Portarlington Beach (new site),11,Nov,44.19,16,0.0
+Portarlington Beach (new site),12,Dec,54.57,28,10.71
+Portsea,1,Jan,15.23,26,0.0
+Portsea,2,Feb,7.39,23,0.0
+Portsea,3,Mar,13.67,12,0.0
+Portsea,4,Apr,15.44,9,0.0
+Portsea,5,May,11.67,6,0.0
+Portsea,6,Jun,9.5,8,0.0
+Portsea,7,Jul,51.75,4,0.0
+Portsea,8,Aug,5.0,4,0.0
+Portsea,9,Sep,6.88,8,0.0
+Portsea,10,Oct,17.7,10,0.0
+Portsea,11,Nov,8.0,10,0.0
+Portsea,12,Dec,12.27,22,0.0
+Rosebud Life Saving Club,1,Jan,38.93,28,0.0
+Rosebud Life Saving Club,2,Feb,34.12,25,4.0
+Rosebud Life Saving Club,3,Mar,42.38,13,7.69
+Rosebud Life Saving Club,4,Apr,355.11,9,11.11
+Rosebud Life Saving Club,5,May,67.33,6,0.0
+Rosebud Life Saving Club,6,Jun,74.75,8,12.5
+Rosebud Life Saving Club,7,Jul,10.0,4,0.0
+Rosebud Life Saving Club,8,Aug,6.25,4,0.0
+Rosebud Life Saving Club,9,Sep,62.12,8,12.5
+Rosebud Life Saving Club,10,Oct,32.4,10,0.0
+Rosebud Life Saving Club,11,Nov,371.82,11,27.27
+Rosebud Life Saving Club,12,Dec,151.38,24,20.83
+Rye,1,Jan,73.59,29,13.79
+Rye,2,Feb,28.48,25,0.0
+Rye,3,Mar,86.85,13,7.69
+Rye,4,Apr,161.22,9,11.11
+Rye,5,May,71.83,6,0.0
+Rye,6,Jun,141.12,8,12.5
+Rye,7,Jul,78.25,4,0.0
+Rye,8,Aug,91.0,4,25.0
+Rye,9,Sep,66.0,8,12.5
+Rye,10,Oct,81.4,10,10.0
+Rye,11,Nov,159.82,11,27.27
+Rye,12,Dec,338.58,24,37.5
+Safety Beach,1,Jan,21.68,28,0.0
+Safety Beach,2,Feb,10.96,25,0.0
+Safety Beach,3,Mar,54.62,13,0.0
+Safety Beach,4,Apr,268.33,9,22.22
+Safety Beach,5,May,36.17,6,0.0
+Safety Beach,6,Jun,62.88,8,12.5
+Safety Beach,7,Jul,5.0,3,0.0
+Safety Beach,8,Aug,5.0,4,0.0
+Safety Beach,9,Sep,26.88,8,0.0
+Safety Beach,10,Oct,8.6,10,0.0
+Safety Beach,11,Nov,444.55,11,36.36
+Safety Beach,12,Dec,110.42,24,20.83
+Sandridge,1,Jan,332.29,28,7.14
+Sandridge,2,Feb,22.84,25,0.0
+Sandridge,3,Mar,38.38,13,7.69
+Sandridge,4,Apr,101.67,9,22.22
+Sandridge,5,May,45.83,6,16.67
+Sandridge,6,Jun,64.88,8,12.5
+Sandridge,7,Jul,60.0,4,25.0
+Sandridge,8,Aug,24.25,4,0.0
+Sandridge,9,Sep,397.0,8,37.5
+Sandridge,10,Oct,231.56,9,11.11
+Sandridge,11,Nov,234.27,11,27.27
+Sandridge,12,Dec,203.29,24,25.0
+Sandringham,1,Jan,22.92,26,0.0
+Sandringham,2,Feb,28.44,25,4.0
+Sandringham,3,Mar,19.71,14,0.0
+Sandringham,4,Apr,196.44,9,11.11
+Sandringham,5,May,874.17,6,16.67
+Sandringham,6,Jun,87.75,8,12.5
+Sandringham,7,Jul,386.5,4,25.0
+Sandringham,8,Aug,5.0,4,0.0
+Sandringham,9,Sep,33.25,8,0.0
+Sandringham,10,Oct,16.11,9,0.0
+Sandringham,11,Nov,172.82,11,18.18
+Sandringham,12,Dec,51.83,23,8.7
+Santa Casa,1,Jan,9.55,29,0.0
+Santa Casa,2,Feb,7.44,25,0.0
+Santa Casa,3,Mar,5.38,13,0.0
+Santa Casa,4,Apr,5.0,9,0.0
+Santa Casa,5,May,13.38,8,0.0
+Santa Casa,6,Jun,6.88,8,0.0
+Santa Casa,7,Jul,8.75,4,0.0
+Santa Casa,8,Aug,5.0,4,0.0
+Santa Casa,9,Sep,10.75,8,0.0
+Santa Casa,10,Oct,8.0,10,0.0
+Santa Casa,11,Nov,24.91,11,0.0
+Santa Casa,12,Dec,70.71,24,4.17
+Seaford,1,Jan,38.46,28,0.0
+Seaford,2,Feb,34.0,25,4.0
+Seaford,3,Mar,54.0,13,15.38
+Seaford,4,Apr,503.33,9,11.11
+Seaford,5,May,56.0,6,0.0
+Seaford,6,Jun,86.62,8,12.5
+Seaford,7,Jul,8.75,4,0.0
+Seaford,8,Aug,8.75,4,0.0
+Seaford,9,Sep,92.25,8,25.0
+Seaford,10,Oct,20.2,10,0.0
+Seaford,11,Nov,136.27,11,27.27
+Seaford,12,Dec,133.04,24,25.0
+Sorrento,1,Jan,43.25,28,3.57
+Sorrento,2,Feb,61.96,25,8.0
+Sorrento,3,Mar,33.92,13,0.0
+Sorrento,4,Apr,39.44,9,0.0
+Sorrento,5,May,17.67,6,0.0
+Sorrento,6,Jun,25.38,8,0.0
+Sorrento,7,Jul,109.25,4,25.0
+Sorrento,8,Aug,8.75,4,0.0
+Sorrento,9,Sep,25.75,8,0.0
+Sorrento,10,Oct,43.7,10,10.0
+Sorrento,11,Nov,39.27,11,0.0
+Sorrento,12,Dec,135.08,24,20.83
+South Melbourne Life Saving Club,1,Jan,182.14,28,17.86
+South Melbourne Life Saving Club,2,Feb,12.4,25,0.0
+South Melbourne Life Saving Club,3,Mar,27.0,13,0.0
+South Melbourne Life Saving Club,4,Apr,127.89,9,11.11
+South Melbourne Life Saving Club,5,May,31.0,6,0.0
+South Melbourne Life Saving Club,6,Jun,41.62,8,0.0
+South Melbourne Life Saving Club,7,Jul,22.25,4,0.0
+South Melbourne Life Saving Club,8,Aug,53.75,4,0.0
+South Melbourne Life Saving Club,9,Sep,186.88,8,25.0
+South Melbourne Life Saving Club,10,Oct,31.89,9,0.0
+South Melbourne Life Saving Club,11,Nov,229.73,11,36.36
+South Melbourne Life Saving Club,12,Dec,74.67,24,12.5
+St Kilda,1,Jan,304.39,28,21.43
+St Kilda,2,Feb,77.52,25,12.0
+St Kilda,3,Mar,76.46,13,7.69
+St Kilda,4,Apr,383.5,10,10.0
+St Kilda,5,May,370.0,6,33.33
+St Kilda,6,Jun,164.12,8,25.0
+St Kilda,7,Jul,530.2,5,20.0
+St Kilda,8,Aug,5.0,4,0.0
+St Kilda,9,Sep,240.75,8,25.0
+St Kilda,10,Oct,54.78,9,11.11
+St Kilda,11,Nov,513.73,11,36.36
+St Kilda,12,Dec,483.5,24,29.17
+St Leonards,1,Jan,58.79,29,6.9
+St Leonards,2,Feb,26.28,25,0.0
+St Leonards,3,Mar,30.69,13,0.0
+St Leonards,4,Apr,153.67,9,22.22
+St Leonards,5,May,44.5,8,0.0
+St Leonards,6,Jun,50.5,8,0.0
+St Leonards,7,Jul,6.25,4,0.0
+St Leonards,8,Aug,8.75,4,0.0
+St Leonards,9,Sep,68.25,8,12.5
+St Leonards,10,Oct,68.8,10,10.0
+St Leonards,11,Nov,101.73,11,9.09
+St Leonards,12,Dec,91.38,24,8.33
+The Dell,1,Jan,60.66,29,6.9
+The Dell,2,Feb,16.58,24,0.0
+The Dell,3,Mar,56.29,14,7.14
+The Dell,4,Apr,68.1,10,0.0
+The Dell,5,May,40.62,8,0.0
+The Dell,6,Jun,64.12,8,0.0
+The Dell,7,Jul,16.25,4,0.0
+The Dell,8,Aug,12.75,4,0.0
+The Dell,9,Sep,41.12,8,12.5
+The Dell,10,Oct,383.5,10,20.0
+The Dell,11,Nov,270.82,11,18.18
+The Dell,12,Dec,357.08,24,20.83
+Werribee Sth,1,Jan,78.9,29,13.79
+Werribee Sth,2,Feb,59.29,24,8.33
+Werribee Sth,3,Mar,43.36,14,7.14
+Werribee Sth,4,Apr,200.1,10,10.0
+Werribee Sth,5,May,21.25,8,0.0
+Werribee Sth,6,Jun,32.12,8,0.0
+Werribee Sth,7,Jul,14.0,4,0.0
+Werribee Sth,8,Aug,5.0,4,0.0
+Werribee Sth,9,Sep,11.38,8,0.0
+Werribee Sth,10,Oct,133.6,10,10.0
+Werribee Sth,11,Nov,698.91,11,27.27
+Werribee Sth,12,Dec,96.13,23,17.39
+Williamstown,1,Jan,51.89,28,7.14
+Williamstown,2,Feb,30.56,25,0.0
+Williamstown,3,Mar,27.0,13,7.69
+Williamstown,4,Apr,183.44,9,11.11
+Williamstown,5,May,67.17,6,0.0
+Williamstown,6,Jun,87.88,8,25.0
+Williamstown,7,Jul,1228.75,4,25.0
+Williamstown,8,Aug,273.75,4,50.0
+Williamstown,9,Sep,55.88,8,12.5
+Williamstown,10,Oct,13.0,9,0.0
+Williamstown,11,Nov,140.82,11,18.18
+Williamstown,12,Dec,70.92,24,12.5

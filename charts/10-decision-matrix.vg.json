@@ -1,0 +1,308 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Should You Swim Today?",
+    "subtitle": [
+      "Columns = months, rows = yesterday's rain bucket.",
+      "Each cell shows the historical Poor rate."
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Playfair Display, Georgia, serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#6a6a6a",
+    "subtitleFont": "Inter, sans-serif",
+    "offset": 12
+  },
+  "background": "transparent",
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 10,
+      "titleFontSize": 11,
+      "labelColor": "#3a3a3a",
+      "domain": false,
+      "ticks": false
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    },
+    "header": {
+      "labelFont": "Inter",
+      "labelFontSize": 13,
+      "labelFontWeight": 700,
+      "labelColor": "#1a1a1a",
+      "title": null
+    }
+  },
+  "data": {
+    "url": "data/decision_matrix.csv",
+    "format": {
+      "parse": {
+        "month": "number",
+        "samples": "number",
+        "poor_pct": "number",
+        "avg_enterococci": "number"
+      }
+    }
+  },
+  "facet": {
+    "field": "region",
+    "type": "nominal",
+    "title": null,
+    "sort": [
+      "Western Shore",
+      "Mornington Peninsula",
+      "Eastern Bayside",
+      "Inner North"
+    ]
+  },
+  "columns": 2,
+  "spacing": 18,
+  "spec": {
+    "width": 270,
+    "height": 150,
+    "layer": [
+      {
+        "description": "Low-sample cells",
+        "transform": [
+          {
+            "filter": "datum.samples < 5"
+          }
+        ],
+        "mark": {
+          "type": "rect",
+          "fill": "#d8d8d2",
+          "stroke": "#777",
+          "strokeDash": [
+            3,
+            2
+          ],
+          "strokeWidth": 1.2
+        },
+        "encoding": {
+          "x": {
+            "field": "month",
+            "type": "ordinal",
+            "title": null,
+            "axis": {
+              "labelExpr": "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value-1]",
+              "labelAngle": 0,
+              "orient": "top",
+              "labelPadding": 6,
+              "labelFontWeight": 600
+            }
+          },
+          "y": {
+            "field": "rain_yesterday_bucket",
+            "type": "ordinal",
+            "title": "Rain yesterday",
+            "sort": [
+              "Dry (0mm)",
+              "Light (<5mm)",
+              "Moderate (5-20mm)",
+              "Heavy (20mm+)"
+            ],
+            "axis": {
+              "labelPadding": 6
+            }
+          },
+          "tooltip": [
+            {
+              "field": "region",
+              "title": "Region"
+            },
+            {
+              "field": "month",
+              "title": "Month"
+            },
+            {
+              "field": "rain_yesterday_bucket",
+              "title": "Rain yesterday"
+            },
+            {
+              "field": "samples",
+              "title": "Routine samples"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Reliable risk cells",
+        "transform": [
+          {
+            "filter": "datum.samples >= 5"
+          }
+        ],
+        "mark": {
+          "type": "rect",
+          "stroke": "#ffffff",
+          "strokeWidth": 2
+        },
+        "encoding": {
+          "x": {
+            "field": "month",
+            "type": "ordinal",
+            "title": null,
+            "axis": {
+              "labelExpr": "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value-1]",
+              "labelAngle": 0,
+              "orient": "top",
+              "labelPadding": 6,
+              "labelFontWeight": 600
+            }
+          },
+          "y": {
+            "field": "rain_yesterday_bucket",
+            "type": "ordinal",
+            "title": "Rain yesterday",
+            "sort": [
+              "Dry (0mm)",
+              "Light (<5mm)",
+              "Moderate (5-20mm)",
+              "Heavy (20mm+)"
+            ],
+            "axis": {
+              "labelPadding": 6
+            }
+          },
+          "color": {
+            "field": "poor_pct",
+            "type": "quantitative",
+            "title": "% Poor",
+            "scale": {
+              "type": "threshold",
+              "domain": [
+                10,
+                20,
+                35
+              ],
+              "range": [
+                "#d9e7ef",
+                "#d4a23a",
+                "#d4762a",
+                "#c73e3e"
+              ]
+            },
+            "legend": {
+              "orient": "bottom",
+              "direction": "horizontal",
+              "offset": 22
+            }
+          },
+          "tooltip": [
+            {
+              "field": "region",
+              "title": "Region"
+            },
+            {
+              "field": "month",
+              "title": "Month"
+            },
+            {
+              "field": "rain_yesterday_bucket",
+              "title": "Rain yesterday"
+            },
+            {
+              "field": "poor_pct",
+              "title": "% Poor",
+              "format": ".1f"
+            },
+            {
+              "field": "avg_enterococci",
+              "title": "Avg",
+              "format": ".1f"
+            },
+            {
+              "field": "samples",
+              "title": "Routine samples"
+            }
+          ]
+        }
+      },
+      {
+        "description": "Low-sample label",
+        "transform": [
+          {
+            "filter": "datum.samples < 5"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "font": "Inter",
+          "fontSize": 9,
+          "fontWeight": 700,
+          "color": "#666"
+        },
+        "encoding": {
+          "x": {
+            "field": "month",
+            "type": "ordinal"
+          },
+          "y": {
+            "field": "rain_yesterday_bucket",
+            "type": "ordinal",
+            "sort": [
+              "Dry (0mm)",
+              "Light (<5mm)",
+              "Moderate (5-20mm)",
+              "Heavy (20mm+)"
+            ]
+          },
+          "text": {
+            "value": "n<5"
+          }
+        }
+      },
+      {
+        "description": "Reliable-cell label",
+        "transform": [
+          {
+            "filter": "datum.samples >= 5"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "font": "Inter",
+          "fontSize": 10,
+          "fontWeight": 600
+        },
+        "encoding": {
+          "x": {
+            "field": "month",
+            "type": "ordinal"
+          },
+          "y": {
+            "field": "rain_yesterday_bucket",
+            "type": "ordinal",
+            "sort": [
+              "Dry (0mm)",
+              "Light (<5mm)",
+              "Moderate (5-20mm)",
+              "Heavy (20mm+)"
+            ]
+          },
+          "text": {
+            "field": "poor_pct",
+            "format": ".0f",
+            "type": "quantitative"
+          },
+          "color": {
+            "condition": {
+              "test": "datum.poor_pct >= 20",
+              "value": "white"
+            },
+            "value": "#3a3a3a"
+          }
+        }
+      }
+    ]
+  }
+}

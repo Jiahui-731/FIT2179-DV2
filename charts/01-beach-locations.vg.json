@@ -1,0 +1,731 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Walking the Bay: 36 Beaches at a Glance",
+    "subtitle": [
+      "Each ray is one beach, ordered clockwise from Williamstown.",
+      "Ray length = bacteria; colour = bay region."
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Playfair Display, Georgia, serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#6a6a6a",
+    "subtitleFont": "Inter, sans-serif",
+    "offset": 12
+  },
+  "width": 720,
+  "height": 760,
+  "background": "transparent",
+  "padding": {
+    "top": 8,
+    "left": 8,
+    "right": 8,
+    "bottom": 8
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "symbolSize": 100
+    }
+  },
+  "layer": [
+    {
+      "description": "Inner bay disk",
+      "data": {
+        "values": [
+          {
+            "x": 360,
+            "y": 380
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "size": 28000,
+        "fill": "#a3c5d4",
+        "fillOpacity": 0.32,
+        "stroke": "#456b78",
+        "strokeWidth": 1,
+        "strokeOpacity": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        }
+      }
+    },
+    {
+      "description": "EPA Good 35 ring",
+      "data": {
+        "values": [
+          {
+            "x": 360,
+            "y": 380
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "size": 169000,
+        "fill": null,
+        "stroke": "#888",
+        "strokeWidth": 0.8,
+        "strokeDash": [
+          4,
+          3
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        }
+      }
+    },
+    {
+      "description": "EPA Poor 200 ring",
+      "data": {
+        "values": [
+          {
+            "x": 360,
+            "y": 380
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "size": 258000,
+        "fill": null,
+        "stroke": "#c73e3e",
+        "strokeWidth": 1.0,
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeOpacity": 0.55
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        }
+      }
+    },
+    {
+      "description": "EPA Good label",
+      "data": {
+        "values": [
+          {
+            "x": 360,
+            "y": 145,
+            "label": "EPA Good ≤ 35"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 9,
+        "fontStyle": "italic",
+        "color": "#666",
+        "baseline": "bottom"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "EPA Poor label",
+      "data": {
+        "values": [
+          {
+            "x": 360,
+            "y": 92,
+            "label": "EPA Poor > 200"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 9,
+        "fontStyle": "italic",
+        "color": "#a02828",
+        "baseline": "bottom"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Center bay name",
+      "data": {
+        "values": [
+          {
+            "x": 360,
+            "y": 372,
+            "label": "PORT"
+          },
+          {
+            "x": 360,
+            "y": 388,
+            "label": "PHILLIP"
+          },
+          {
+            "x": 360,
+            "y": 404,
+            "label": "BAY"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Playfair Display",
+        "fontStyle": "italic",
+        "fontSize": 16,
+        "color": "#1f3942",
+        "fontWeight": 600,
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Sample count center",
+      "data": {
+        "values": [
+          {
+            "x": 360,
+            "y": 432,
+            "label": "5,416 routine samples · 2020-2025"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 10,
+        "color": "#6a6a6a",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Compass N S E W",
+      "data": {
+        "values": [
+          {
+            "x": 360,
+            "y": 22,
+            "label": "N"
+          },
+          {
+            "x": 700,
+            "y": 380,
+            "label": "E"
+          },
+          {
+            "x": 360,
+            "y": 738,
+            "label": "S"
+          },
+          {
+            "x": 20,
+            "y": 380,
+            "label": "W"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 9,
+        "fontWeight": 700,
+        "color": "#999",
+        "letterSpacing": 1.5,
+        "opacity": 0.55
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Beach rays",
+      "data": {
+        "url": "data/beach_radial.csv",
+        "format": {
+          "parse": {
+            "inner_x": "number",
+            "inner_y": "number",
+            "dot_x": "number",
+            "dot_y": "number",
+            "label_x": "number",
+            "label_y": "number",
+            "avg_enterococci": "number",
+            "poor_pct": "number",
+            "samples": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2.6,
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "x": {
+          "field": "inner_x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "inner_y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "x2": {
+          "field": "dot_x"
+        },
+        "y2": {
+          "field": "dot_y"
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Western Shore",
+              "Mornington Peninsula",
+              "Eastern Bayside",
+              "Inner North"
+            ],
+            "range": [
+              "#3a7ca5",
+              "#7ba7c7",
+              "#d4a23a",
+              "#c73e3e"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "title": "Region:",
+            "symbolType": "square",
+            "symbolSize": 120,
+            "offset": 6
+          }
+        },
+        "tooltip": [
+          {
+            "field": "site_name",
+            "title": "Beach"
+          },
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "avg_enterococci",
+            "title": "Avg enterococci",
+            "format": ".1f"
+          },
+          {
+            "field": "poor_pct",
+            "title": "% Poor",
+            "format": ".1f"
+          },
+          {
+            "field": "samples",
+            "title": "Samples"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Beach outer dots",
+      "data": {
+        "url": "data/beach_radial.csv",
+        "format": {
+          "parse": {
+            "dot_x": "number",
+            "dot_y": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "size": 60,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.2,
+        "opacity": 0.95
+      },
+      "encoding": {
+        "x": {
+          "field": "dot_x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "dot_y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Western Shore",
+              "Mornington Peninsula",
+              "Eastern Bayside",
+              "Inner North"
+            ],
+            "range": [
+              "#3a7ca5",
+              "#7ba7c7",
+              "#d4a23a",
+              "#c73e3e"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "Beach labels",
+      "data": {
+        "url": "data/beach_radial.csv",
+        "format": {
+          "parse": {
+            "label_x": "number",
+            "label_y": "number",
+            "label_angle": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 9.5,
+        "fontWeight": 500,
+        "color": "#3a3a3a",
+        "baseline": "top",
+        "dy": 8
+      },
+      "encoding": {
+        "x": {
+          "field": "label_x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "label_y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "name_short"
+        },
+        "align": {
+          "field": "label_align",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "Region sector labels",
+      "data": {
+        "values": [
+          {
+            "x": 540,
+            "y": 78,
+            "label": "INNER NORTH",
+            "color": "#a02828"
+          },
+          {
+            "x": 700,
+            "y": 415,
+            "label": "EASTERN BAYSIDE",
+            "color": "#a07820"
+          },
+          {
+            "x": 360,
+            "y": 700,
+            "label": "MORNINGTON PENINSULA",
+            "color": "#1e4a6b"
+          },
+          {
+            "x": 88,
+            "y": 220,
+            "label": "WESTERN SHORE",
+            "color": "#1e4a6b"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "letterSpacing": 1.8,
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              720
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              760,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "field": "color",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
+      }
+    }
+  ]
+}

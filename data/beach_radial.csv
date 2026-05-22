@@ -1,0 +1,37 @@
+site_name,name_short,region,avg_enterococci,poor_pct,samples,cw_north_deg,inner_x,inner_y,dot_x,dot_y,label_x,label_y,label_align,label_angle,order
+Williamstown,Williamstown,Inner North,101.68,10.07,149,10.55,395.72,188.3,407.72,123.86,409.74,113.05,left,280.55,0
+Sandridge,Sandridge,Inner North,168.7,14.09,149,14.33,408.27,191.07,429.16,109.27,431.88,98.61,left,284.33,1
+Port Melbourne,Port Melbourne,Inner North,367.63,18.67,150,18.91,423.21,195.53,463.61,77.63,467.17,67.22,left,288.91,2
+South Melbourne Life Saving Club,South Melbourne LSC,Inner North,92.86,10.07,149,20.87,429.46,197.79,451.77,139.26,455.68,128.98,left,290.87,3
+St Kilda,St Kilda,Inner North,272.64,19.87,151,28.15,451.99,208.06,502.62,113.43,507.81,103.73,left,298.15,4
+Elwood,Elwood,Inner North,115.11,12.16,148,32.35,464.35,215.27,501.66,156.35,507.55,147.06,left,302.35,5
+Brighton Life Saving Club,Brighton LSC,Inner North,89.49,5.15,136,36.68,476.48,223.61,513.21,174.3,519.78,165.48,left,306.68,6
+Hampton,Hampton,Inner North,114.13,11.41,149,42.24,491.09,235.64,537.78,184.24,545.17,176.09,left,312.24,7
+Sandringham,Sandringham,Eastern Bayside,97.74,6.12,147,45.41,498.87,243.1,544.63,197.99,552.47,190.27,left,315.41,8
+Half Moon Bay,Half Moon Bay,Eastern Bayside,60.14,6.04,149,50.78,511.08,256.71,550.14,224.84,558.66,217.89,left,320.78,9
+Black Rock Life Saving Club,Black Rock LSC,Eastern Bayside,41.77,2.72,147,52.68,515.07,261.77,548.48,236.3,557.22,229.63,left,322.68,10
+Beaumaris,Beaumaris,Eastern Bayside,81.9,9.4,149,60.11,529.07,282.83,580.07,253.52,589.6,248.04,left,330.11,11
+Mentone,Mentone,Eastern Bayside,163.22,19.33,150,62.02,532.2,288.51,605.54,249.55,615.25,244.38,left,332.02,12
+Mordialloc,Mordialloc,Eastern Bayside,129.25,13.42,149,68.65,541.62,309.02,610.45,282.11,620.69,278.11,left,338.65,13
+Aspendale Life Saving Club,Aspendale LSC,Eastern Bayside,83.07,7.33,150,73.99,547.43,326.2,604.38,309.86,614.95,306.83,left,343.99,14
+Carrum Surf Life Saving Club,Carrum SLC,Eastern Bayside,359.46,15.03,153,85.01,554.26,363.06,677.03,352.35,687.99,351.39,left,355.01,15
+Seaford,Seaford,Eastern Bayside,92.6,10.67,150,90.69,554.99,382.36,617.53,383.11,628.53,383.24,left,0.69,16
+Frankston Surf Life Saving Club,Frankston SLC,Eastern Bayside,282.43,22.37,152,98.96,552.62,410.37,660.53,427.38,671.39,429.09,left,8.96,17
+Frankston Coast Guard,Frankston Coast Guard,Eastern Bayside,439.06,15.44,149,100.05,552.01,414.02,686.12,437.78,696.95,439.7,left,10.05,18
+Canadian Bay,Canadian Bay,Eastern Bayside,158.75,13.91,151,107.11,546.37,437.37,624.64,461.46,635.16,464.7,left,17.11,19
+Mornington Life Saving Club,Mornington LSC,Mornington Peninsula,324.5,12.42,153,120.34,528.3,478.49,629.36,537.62,638.85,543.18,left,30.34,20
+Mt Martha Life Saving Club,Mt Martha LSC,Mornington Peninsula,68.51,5.41,148,135.23,497.33,518.44,535.21,556.64,542.96,564.45,left,45.23,21
+Safety Beach,Safety Beach,Mornington Peninsula,84.58,8.05,149,146.03,468.97,541.71,502.38,591.28,508.53,600.41,left,56.03,22
+Dromana,Dromana,Mornington Peninsula,132.91,11.33,150,153.71,446.37,554.83,479.56,622.01,484.44,631.87,left,63.71,23
+Rosebud Life Saving Club,Rosebud LSC,Mornington Peninsula,102.01,8.67,150,162.48,418.7,565.96,438.46,628.56,441.77,639.05,left,72.48,24
+Rye,Rye,Mornington Peninsula,125.09,14.57,151,183.79,347.11,574.57,342.3,647.11,341.58,658.09,right,273.79,25
+Blairgowrie,Blairgowrie,Mornington Peninsula,178.11,8.05,149,194.66,310.64,568.65,288.68,652.57,285.89,663.21,right,284.66,26
+Sorrento,Sorrento,Mornington Peninsula,57.69,6.67,150,201.76,287.71,561.11,269.41,606.96,265.33,617.17,right,291.76,27
+Portsea,Portsea,Mornington Peninsula,12.85,0.0,142,211.88,257.02,545.59,244.72,565.38,238.91,574.72,right,301.88,28
+Santa Casa,Santa Casa,Western Shore,19.16,0.65,153,229.46,211.82,506.76,190.2,525.25,181.84,532.4,right,319.46,29
+St Leonards,St Leonards,Western Shore,62.16,5.88,153,241.59,188.49,472.79,143.42,497.17,133.74,502.41,right,331.59,30
+The Dell,The Dell,Western Shore,131.77,8.44,154,259.63,168.18,415.09,94.79,428.51,83.97,430.49,right,349.63,31
+Eastern Beach,Eastern Beach,Western Shore,106.43,10.97,155,264.44,165.92,398.9,99.18,405.4,88.23,406.47,right,354.44,32
+Portarlington Beach (new site),Portarlington,Western Shore,54.22,4.47,179,266.36,165.39,392.38,117.63,395.42,106.65,396.12,right,356.36,33
+Werribee Sth,Werribee Sth,Western Shore,118.61,10.46,153,308.51,207.4,258.59,152.01,214.52,143.4,207.67,right,38.51,34
+Altona,Altona,Inner North,119.35,8.67,150,355.32,344.08,185.65,338.29,114.88,337.39,103.91,right,85.32,35

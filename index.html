@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can We Swim Today? — Melbourne Beach Water Quality</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <p class="kicker">A data story · 2026</p>
+    <h1>Can We Swim Today?</h1>
+    <p class="lede">
+      Every summer, millions of Melburnians flock to the beaches of Port Phillip Bay.
+      But the water isn't always as clean as it looks.
+      Using six years of EPA Victoria sampling and Bureau of Meteorology rainfall data,
+      this is a story about <em>when</em>, <em>where</em>, and <em>why</em>
+      it's actually safe to swim.
+    </p>
+    <p class="byline">By Jiahui · 5,416 routine samples · 36 beaches · 2020-2025</p>
+  </header>
+
+  <section class="key-findings">
+    <h3>Three things the data already knows</h3>
+    <ol>
+      <li>Across 5,416 routine samples, <strong>10.2% fail EPA's swim-safe threshold</strong> — but the failures cluster, badly.</li>
+      <li>The single biggest predictor isn't the season but <strong>yesterday's rain</strong>: more than 20mm nearly doubles the share of failed samples.</li>
+      <li><strong>Eastern Bayside</strong> beaches got dramatically dirtier between 2020-2022 and 2023-2025; several Inner-North beaches actually <em>improved</em>.</li>
+    </ol>
+  </section>
+
+  <nav class="toc">
+    <a href="#ch1">① Where</a>
+    <a href="#ch2">② How dirty</a>
+    <a href="#ch3">③ When</a>
+    <a href="#ch4">④ Why</a>
+    <a href="#ch5">⑤ Region</a>
+    <a href="#ch6">⑥ Verdict</a>
+  </nav>
+
+  <main>
+
+    <section class="chapter" id="ch1">
+      <p class="chapter-num"><span class="ch-no">①</span> Where</p>
+      <h2>Where are the monitored beaches?</h2>
+      <p class="prose">
+        EPA monitors <strong>36 beaches</strong> around Port Phillip Bay.
+        Hover any dot for its long-term average.
+      </p>
+      <div id="chart-0" class="chart"></div>
+      <p class="prose interlude">
+        Unfold the coast into a ring of 36 rays.
+        Each ray is one beach; longer means dirtier.
+      </p>
+      <div id="chart-1" class="chart"></div>
+    </section>
+
+    <section class="chapter" id="ch2">
+      <p class="chapter-num"><span class="ch-no">②</span> How dirty</p>
+      <h2>Not every beach is created equal.</h2>
+      <p class="prose">
+        <strong>Frankston Coast Guard</strong> averages 439 organisms per 100mL.
+        <strong>Portsea</strong>, down the peninsula, averages 13.
+      </p>
+      <div id="chart-2" class="chart"></div>
+      <p class="prose interlude">
+        Ten beaches sit above the EPA Poor threshold.
+        <strong>Frankston Coast Guard</strong> tops the list at 439.
+      </p>
+      <div id="chart-7" class="chart"></div>
+    </section>
+
+    <section class="chapter" id="ch3">
+      <p class="chapter-num"><span class="ch-no">③</span> When</p>
+      <h2>The dirtiest months are the ones we swim in.</h2>
+      <p class="prose">
+        The dirtiest beaches peak in <strong>late summer and early autumn</strong>.
+        That's exactly when people swim.
+      </p>
+      <div id="chart-3" class="chart"></div>
+      <p class="prose interlude">
+        Ten beaches moved by a meaningful margin.
+        Five for the worse, five for the better.
+      </p>
+      <div id="chart-5" class="chart"></div>
+      <p class="prose interlude">
+        Some months are bay-wide disasters.
+        Four months saw <strong>over a quarter</strong> of samples fail.
+      </p>
+      <div id="chart-8" class="chart"></div>
+    </section>
+
+    <section class="chapter" id="ch4">
+      <p class="chapter-num"><span class="ch-no">④</span> Why</p>
+      <h2>The single biggest predictor isn't the season.</h2>
+      <p class="prose">
+        The biggest predictor is whether <strong>it rained yesterday</strong>.
+        Each dot is one sample; the dashed line, the trend.
+      </p>
+      <div id="chart-4" class="chart"></div>
+      <p class="prose interlude">
+        Bin by yesterday's rainfall — the effect is stark.
+      </p>
+      <div id="chart-6" class="chart"></div>
+    </section>
+
+    <section class="chapter" id="ch5">
+      <p class="chapter-num"><span class="ch-no">⑤</span> Region</p>
+      <h2>Geography beats timing.</h2>
+      <p class="prose">
+        <strong>Western Shore</strong> has half the bacteria of the Inner North.
+        The Mornington Peninsula isn't the clean haven you'd expect.
+      </p>
+      <div id="chart-9" class="chart"></div>
+    </section>
+
+    <section class="chapter" id="ch6">
+      <p class="chapter-num"><span class="ch-no">⑥</span> Verdict</p>
+      <h2>So — should you swim today?</h2>
+      <p class="prose">
+        Find today's month at top, yesterday's rainfall on the side.
+        The cell shows the historical Poor rate there.
+      </p>
+      <div id="chart-10" class="chart"></div>
+      <p class="prose closing">
+        The summary is simple: avoid the inner-city beaches; avoid the 24 hours after
+        heavy rain; avoid late summer and early autumn if you can. Otherwise — go swim.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Author:</strong> Jiahui · FIT2179 Data Visualisation 2 · Monash University · 2026</p>
+    <p><strong>Data sources:</strong>
+      <a href="https://discover.data.vic.gov.au/dataset/beach-report-enterococci-data">EPA Victoria Beach Report (enterococci)</a> ·
+      <a href="http://www.bom.gov.au/climate/data/">BOM Daily Rainfall — Melbourne Olympic Park</a> ·
+      <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors — Port Phillip Bay coastline (relation 1221199), Melbourne motorways, metropolitan railway (ODbL)
+    </p>
+    <p><strong>Geographic ordering:</strong> beach positions in Charts 1 and 2 derived from EPA site latitude/longitude metadata, sorted clockwise from bay centre.</p>
+    <p class="ai-ack">
+      Claude was used as an assistant to check grammar and tighten code syntax during development. The choice of topic, the visualisation concept, the selection of idioms, the data analysis, the layout, and the narrative writing are the author's own work.
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

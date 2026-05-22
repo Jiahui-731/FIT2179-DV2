@@ -1,0 +1,228 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The Bay's Ten Worst Beaches Peak in Late Summer",
+    "subtitle": [
+      "Monthly bacteria for the ten dirtiest beaches, 2020-2025.",
+      "Blue columns mark Nov-Apr — when people swim."
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Playfair Display, Georgia, serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#6a6a6a",
+    "subtitleFont": "Inter, sans-serif",
+    "offset": 12
+  },
+  "width": 580,
+  "height": 320,
+  "background": "transparent",
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "transform": [
+    {
+      "lookup": "site_name",
+      "from": {
+        "data": {
+          "url": "data/beach_summary.csv",
+          "format": {
+            "parse": {
+              "avg_enterococci": "number"
+            }
+          }
+        },
+        "key": "site_name",
+        "fields": [
+          "avg_enterococci"
+        ]
+      },
+      "as": [
+        "beach_avg"
+      ]
+    },
+    {
+      "filter": "datum.beach_avg >= 158.5"
+    },
+    {
+      "window": [
+        {
+          "op": "dense_rank",
+          "as": "beach_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "beach_avg",
+          "order": "descending"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "domain": false,
+      "ticks": false,
+      "labelColor": "#3a3a3a"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    }
+  },
+  "data": {
+    "url": "data/monthly_by_beach.csv",
+    "format": {
+      "parse": {
+        "month": "number",
+        "avg_enterococci": "number",
+        "samples": "number",
+        "poor_pct": "number"
+      }
+    }
+  },
+  "layer": [
+    {
+      "description": "Heatmap cells",
+      "mark": {
+        "type": "rect",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelExpr": "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value-1]",
+            "labelAngle": 0,
+            "orient": "top",
+            "labelPadding": 8
+          }
+        },
+        "y": {
+          "field": "site_name",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "op": "min",
+            "field": "beach_rank",
+            "order": "ascending"
+          },
+          "axis": {
+            "labelLimit": 220,
+            "labelPadding": 8
+          }
+        },
+        "color": {
+          "field": "avg_enterococci",
+          "type": "quantitative",
+          "title": [
+            "Avg enterococci",
+            "(orgs / 100mL)"
+          ],
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              35,
+              100,
+              200
+            ],
+            "range": [
+              "#3a7ca5",
+              "#9ac3d5",
+              "#d4a23a",
+              "#c73e3e"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "offset": 30
+          }
+        },
+        "tooltip": [
+          {
+            "field": "site_name",
+            "title": "Beach"
+          },
+          {
+            "field": "month_name",
+            "title": "Month"
+          },
+          {
+            "field": "avg_enterococci",
+            "title": "Avg enterococci",
+            "format": ".1f"
+          },
+          {
+            "field": "samples",
+            "title": "Samples"
+          },
+          {
+            "field": "poor_pct",
+            "title": "% Poor",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Swim-season overlay across Nov-Apr columns",
+      "transform": [
+        {
+          "filter": "indexof([11,12,1,2,3,4], datum.month) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "fill": null,
+        "stroke": "#1e4a6b",
+        "strokeWidth": 2.5,
+        "opacity": 0.55
+      },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "ordinal",
+          "title": null
+        },
+        "y": {
+          "field": "site_name",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "op": "min",
+            "field": "beach_rank",
+            "order": "ascending"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "site_name",
+            "title": "Beach"
+          },
+          {
+            "field": "month_name",
+            "title": "Swim-season month"
+          },
+          {
+            "field": "samples",
+            "title": "Samples"
+          }
+        ]
+      }
+    }
+  ]
+}

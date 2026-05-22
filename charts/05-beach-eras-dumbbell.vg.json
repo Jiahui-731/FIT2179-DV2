@@ -1,0 +1,390 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Five Beaches Got Much Worse. Five Got Much Better.",
+    "subtitle": [
+      "Average enterococci, 2020-2022 (hollow) versus 2023-2025 (solid).",
+      "Top: biggest declines. Bottom: biggest improvements."
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Playfair Display, Georgia, serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#6a6a6a",
+    "subtitleFont": "Inter, sans-serif",
+    "offset": 12
+  },
+  "background": "transparent",
+  "width": 460,
+  "height": 380,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#3a3a3a",
+      "titleColor": "#3a3a3a",
+      "domain": false,
+      "ticks": false,
+      "grid": false
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "x1": 0,
+            "x2": 35,
+            "label": "Good ≤35"
+          },
+          {
+            "x1": 35,
+            "x2": 200,
+            "label": "Caution 35-200"
+          },
+          {
+            "x1": 200,
+            "x2": 700,
+            "label": "Poor >200"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "opacity": 0.55
+      },
+      "encoding": {
+        "x": {
+          "field": "x1",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "color": {
+          "field": "label",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Good ≤35",
+              "Caution 35-200",
+              "Poor >200"
+            ],
+            "range": [
+              "#d6e7ee",
+              "#f0e2c5",
+              "#f0d3d2"
+            ]
+          },
+          "legend": {
+            "title": "EPA Beach Action Values",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "offset": 28,
+            "symbolType": "square",
+            "symbolSize": 140
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "stroke": "#999",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              620
+            ]
+          },
+          "axis": {
+            "title": "Avg enterococci (orgs / 100mL, routine samples)",
+            "values": [
+              0,
+              35,
+              200,
+              400,
+              600
+            ],
+            "labelPadding": 6,
+            "titlePadding": 12
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/beach_eras_wide.csv",
+        "format": {
+          "parse": {
+            "rank": "number",
+            "delta": "number",
+            "mean_ent_a": "number",
+            "mean_ent_b": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.rank <= 5 || datum.rank >= 32"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "x": {
+          "field": "mean_ent_a",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "mean_ent_b"
+        },
+        "y": {
+          "field": "site_name",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          },
+          "axis": {
+            "labelLimit": 240,
+            "labelPadding": 8,
+            "labelFontSize": 12
+          }
+        },
+        "color": {
+          "field": "delta",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              0
+            ],
+            "range": [
+              "#1e4a6b",
+              "#c73e3e"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/beach_eras_wide.csv",
+        "format": {
+          "parse": {
+            "rank": "number",
+            "mean_ent_a": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.rank <= 5 || datum.rank >= 32"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 110,
+        "fill": "#ffffff",
+        "stroke": "#555",
+        "strokeWidth": 1.6
+      },
+      "encoding": {
+        "x": {
+          "field": "mean_ent_a",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "site_name",
+          "type": "nominal",
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/beach_eras_wide.csv",
+        "format": {
+          "parse": {
+            "rank": "number",
+            "delta": "number",
+            "mean_ent_b": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.rank <= 5 || datum.rank >= 32"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 160,
+        "stroke": "#3a3a3a",
+        "strokeWidth": 0.6
+      },
+      "encoding": {
+        "x": {
+          "field": "mean_ent_b",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "site_name",
+          "type": "nominal",
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          }
+        },
+        "color": {
+          "field": "delta",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              0
+            ],
+            "range": [
+              "#1e4a6b",
+              "#c73e3e"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "site_name",
+            "title": "Beach"
+          },
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "mean_ent_a",
+            "title": "2020-2022 mean",
+            "format": ".0f"
+          },
+          {
+            "field": "mean_ent_b",
+            "title": "2023-2025 mean",
+            "format": ".0f"
+          },
+          {
+            "field": "delta",
+            "title": "Δ",
+            "format": "+.0f"
+          },
+          {
+            "field": "pct_change",
+            "title": "% change",
+            "format": "+.0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/beach_eras_wide.csv",
+        "format": {
+          "parse": {
+            "rank": "number",
+            "delta": "number",
+            "mean_ent_a": "number",
+            "mean_ent_b": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.rank <= 5 || datum.rank >= 32"
+        },
+        {
+          "calculate": "max(datum.mean_ent_a, datum.mean_ent_b)",
+          "as": "x_right"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "font": "Inter",
+        "fontSize": 11,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "x_right",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "site_name",
+          "type": "nominal",
+          "sort": {
+            "field": "rank",
+            "order": "ascending"
+          }
+        },
+        "text": {
+          "field": "delta",
+          "type": "quantitative",
+          "format": "+.0f"
+        },
+        "color": {
+          "field": "delta",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              0
+            ],
+            "range": [
+              "#1e4a6b",
+              "#a82828"
+            ]
+          },
+          "legend": null
+        }
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "independent"
+    }
+  }
+}

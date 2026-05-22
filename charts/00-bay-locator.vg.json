@@ -1,0 +1,1171 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Three Beaches Above 350, Two Below 20",
+    "subtitle": [
+      "Frankston Coast Guard averages 34× Portsea.",
+      "Circle size shows long-term mean bacteria, 2020-2025."
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Playfair Display, Georgia, serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#6a6a6a",
+    "subtitleFont": "Inter, sans-serif",
+    "offset": 14
+  },
+  "width": 760,
+  "height": 650,
+  "background": "transparent",
+  "padding": {
+    "top": 8,
+    "left": 8,
+    "right": 8,
+    "bottom": 8
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [
+      144.79,
+      -38.12
+    ],
+    "scale": 37000,
+    "translate": [
+      380,
+      325
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "labelColor": "#3a3a3a",
+      "titleColor": "#3a3a3a"
+    }
+  },
+  "resolve": {
+    "scale": {
+      "size": "independent",
+      "color": "independent"
+    }
+  },
+  "layer": [
+    {
+      "description": "Tertiary roads — palest cool-grey (outer-suburb + rural connector roads; fills the western/north-western rural areas)",
+      "data": {
+        "url": "data/osm_tertiary.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#e8ebee",
+        "strokeWidth": 0.4,
+        "opacity": 0.85,
+        "clip": true
+      }
+    },
+    {
+      "description": "Secondary roads — light cool-grey, single thin stroke (suburb-grade thoroughfares, gives the city its grid texture)",
+      "data": {
+        "url": "data/osm_secondary.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#dfe3e7",
+        "strokeWidth": 0.55,
+        "opacity": 0.85,
+        "clip": true
+      }
+    },
+    {
+      "description": "Primary roads — medium cool-grey single stroke (main urban thoroughfares)",
+      "data": {
+        "url": "data/osm_primary.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#bfc8d2",
+        "strokeWidth": 0.85,
+        "opacity": 0.9,
+        "clip": true
+      }
+    },
+    {
+      "description": "Trunk roads with route number (A/M/B refs) — light amber, between primary grey and motorway full amber",
+      "data": {
+        "url": "data/osm_trunk.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#d4a66a",
+        "strokeWidth": 1.4,
+        "opacity": 0.92,
+        "clip": true
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "title": "Road"
+          },
+          {
+            "field": "properties.ref",
+            "title": "Route"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Metro Trains commuter railway — dashed dark grey, painted under water so cross-water lines (rare) get masked",
+      "data": {
+        "url": "data/osm_railway.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#5a5a5a",
+        "strokeWidth": 0.9,
+        "strokeDash": [
+          3,
+          2
+        ],
+        "opacity": 0.75,
+        "clip": true
+      }
+    },
+    {
+      "description": "Motorways — outer amber casing (OSM highway=motorway/motorway_link)",
+      "data": {
+        "url": "data/osm_motorways.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#c08840",
+        "strokeWidth": 3.4,
+        "opacity": 0.95,
+        "clip": true
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.name",
+            "title": "Motorway"
+          },
+          {
+            "field": "properties.ref",
+            "title": "Route"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Motorways — inner light amber",
+      "data": {
+        "url": "data/osm_motorways.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#f4c684",
+        "strokeWidth": 1.9,
+        "opacity": 0.95,
+        "clip": true
+      }
+    },
+    {
+      "description": "Bay water — OSM-accurate Port Phillip outline (Douglas-Peucker simplified to 219 vertices)",
+      "data": {
+        "url": "data/ppb_water_osm.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#b5dee8",
+        "fillOpacity": 1,
+        "stroke": "#8ab5c2",
+        "strokeWidth": 0.7
+      }
+    },
+    {
+      "description": "Sub-bay region dashed boundaries — stroke only",
+      "data": {
+        "url": "data/ppb_regions.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#6f9aa8",
+        "strokeWidth": 0.7,
+        "strokeDash": [
+          5,
+          4
+        ],
+        "opacity": 0.65
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.region",
+            "title": "Bay district"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Yarra river",
+      "data": {
+        "url": "data/yarra_river.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#7fb8c8",
+        "strokeWidth": 1.4,
+        "opacity": 0.9
+      }
+    },
+    {
+      "description": "Bay name labels — cyan italic (Google Maps water-name style)",
+      "data": {
+        "values": [
+          {
+            "lon": 144.82,
+            "lat": -38.2,
+            "label": "Port Phillip"
+          },
+          {
+            "lon": 144.81,
+            "lat": -38.51,
+            "label": "Bass Strait"
+          },
+          {
+            "lon": 144.84,
+            "lat": -37.855,
+            "label": "Hobsons Bay"
+          },
+          {
+            "lon": 144.46,
+            "lat": -38.13,
+            "label": "Corio Bay"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 14,
+        "fontWeight": 600,
+        "fontStyle": "italic",
+        "fill": "#3a7a8a",
+        "opacity": 0.95
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Sub-bay region wordmarks",
+      "data": {
+        "values": [
+          {
+            "lon": 144.82,
+            "lat": -37.985,
+            "label": "INNER NORTH"
+          },
+          {
+            "lon": 145.02,
+            "lat": -38.075,
+            "label": "EASTERN BAYSIDE"
+          },
+          {
+            "lon": 144.86,
+            "lat": -38.448,
+            "label": "MORNINGTON PENINSULA"
+          },
+          {
+            "lon": 144.55,
+            "lat": -37.985,
+            "label": "WESTERN SHORE"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": 800,
+        "letterSpacing": 1.4,
+        "fill": "#7a7a7a",
+        "opacity": 0.85
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Primary town labels — halo",
+      "data": {
+        "values": [
+          {
+            "lon": 144.963,
+            "lat": -37.814,
+            "label": "Melbourne"
+          },
+          {
+            "lon": 144.98,
+            "lat": -37.868,
+            "label": "St Kilda"
+          },
+          {
+            "lon": 145.003,
+            "lat": -37.914,
+            "label": "Brighton"
+          },
+          {
+            "lon": 145.127,
+            "lat": -38.143,
+            "label": "Frankston"
+          },
+          {
+            "lon": 145.17,
+            "lat": -38.005,
+            "label": "Dandenong"
+          },
+          {
+            "lon": 145.037,
+            "lat": -38.227,
+            "label": "Mornington"
+          },
+          {
+            "lon": 144.898,
+            "lat": -37.863,
+            "label": "Williamstown"
+          },
+          {
+            "lon": 144.665,
+            "lat": -37.9,
+            "label": "Werribee"
+          },
+          {
+            "lon": 144.42,
+            "lat": -38.148,
+            "label": "Geelong"
+          },
+          {
+            "lon": 144.735,
+            "lat": -38.326,
+            "label": "Sorrento"
+          },
+          {
+            "lon": 144.661,
+            "lat": -38.267,
+            "label": "Queenscliff"
+          },
+          {
+            "lon": 144.9047,
+            "lat": -38.3558,
+            "label": "Rosebud"
+          },
+          {
+            "lon": 144.6509,
+            "lat": -38.1154,
+            "label": "Portarlington"
+          },
+          {
+            "lon": 144.875,
+            "lat": -38.455,
+            "label": "Fingal"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "fill": "#1a1a1a",
+        "stroke": "#ffffff",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Primary town labels — foreground",
+      "data": {
+        "values": [
+          {
+            "lon": 144.963,
+            "lat": -37.814,
+            "label": "Melbourne"
+          },
+          {
+            "lon": 144.98,
+            "lat": -37.868,
+            "label": "St Kilda"
+          },
+          {
+            "lon": 145.003,
+            "lat": -37.914,
+            "label": "Brighton"
+          },
+          {
+            "lon": 145.127,
+            "lat": -38.143,
+            "label": "Frankston"
+          },
+          {
+            "lon": 145.17,
+            "lat": -38.005,
+            "label": "Dandenong"
+          },
+          {
+            "lon": 145.037,
+            "lat": -38.227,
+            "label": "Mornington"
+          },
+          {
+            "lon": 144.898,
+            "lat": -37.863,
+            "label": "Williamstown"
+          },
+          {
+            "lon": 144.665,
+            "lat": -37.9,
+            "label": "Werribee"
+          },
+          {
+            "lon": 144.42,
+            "lat": -38.148,
+            "label": "Geelong"
+          },
+          {
+            "lon": 144.735,
+            "lat": -38.326,
+            "label": "Sorrento"
+          },
+          {
+            "lon": 144.661,
+            "lat": -38.267,
+            "label": "Queenscliff"
+          },
+          {
+            "lon": 144.9047,
+            "lat": -38.3558,
+            "label": "Rosebud"
+          },
+          {
+            "lon": 144.6509,
+            "lat": -38.1154,
+            "label": "Portarlington"
+          },
+          {
+            "lon": 144.875,
+            "lat": -38.455,
+            "label": "Fingal"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 11.5,
+        "fontWeight": 700,
+        "fill": "#1a1a1a"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Secondary peninsula town labels",
+      "data": {
+        "values": [
+          {
+            "lon": 145.095,
+            "lat": -38.185,
+            "label": "Mount Eliza",
+            "dx": 8,
+            "dy": -3,
+            "align": "left"
+          },
+          {
+            "lon": 144.998,
+            "lat": -38.302,
+            "label": "Safety Beach",
+            "dx": 8,
+            "dy": -4,
+            "align": "left"
+          },
+          {
+            "lon": 144.964,
+            "lat": -38.335,
+            "label": "Dromana",
+            "dx": 8,
+            "dy": -1,
+            "align": "left"
+          },
+          {
+            "lon": 144.842,
+            "lat": -38.371,
+            "label": "Rye",
+            "dx": -8,
+            "dy": 8,
+            "align": "right"
+          },
+          {
+            "lon": 144.779,
+            "lat": -38.362,
+            "label": "Blairgowrie",
+            "dx": -8,
+            "dy": -7,
+            "align": "right"
+          },
+          {
+            "lon": 144.719,
+            "lat": -38.352,
+            "label": "Portsea",
+            "dx": -8,
+            "dy": -8,
+            "align": "right"
+          },
+          {
+            "lon": 144.716,
+            "lat": -38.171,
+            "label": "St Leonards",
+            "dx": 8,
+            "dy": 4,
+            "align": "left"
+          },
+          {
+            "lon": 144.563,
+            "lat": -38.152,
+            "label": "Clifton Springs",
+            "dx": -8,
+            "dy": -8,
+            "align": "right"
+          },
+          {
+            "lon": 144.405,
+            "lat": -38.02,
+            "label": "Lara",
+            "dx": 8,
+            "dy": -2,
+            "align": "left"
+          },
+          {
+            "lon": 144.499,
+            "lat": -37.944,
+            "label": "Little River",
+            "dx": 8,
+            "dy": -2,
+            "align": "left"
+          },
+          {
+            "lon": 144.474,
+            "lat": -38.045,
+            "label": "Avalon",
+            "dx": -8,
+            "dy": 0,
+            "align": "right"
+          },
+          {
+            "lon": 144.692,
+            "lat": -37.832,
+            "label": "Tarneit",
+            "dx": 0,
+            "dy": -8,
+            "align": "center"
+          },
+          {
+            "lon": 144.61,
+            "lat": -37.892,
+            "label": "Wyndham Vale",
+            "dx": -6,
+            "dy": -2,
+            "align": "right"
+          },
+          {
+            "lon": 144.7,
+            "lat": -37.88,
+            "label": "Hoppers Crossing",
+            "dx": 8,
+            "dy": 4,
+            "align": "left"
+          },
+          {
+            "lon": 144.75,
+            "lat": -37.913,
+            "label": "Point Cook",
+            "dx": 8,
+            "dy": 0,
+            "align": "left"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 8.5,
+        "fontWeight": 500,
+        "fill": "#4a4a4a",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5,
+        "align": {
+          "expr": "datum.align"
+        },
+        "baseline": "middle",
+        "dx": {
+          "expr": "datum.dx"
+        },
+        "dy": {
+          "expr": "datum.dy"
+        }
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Motorway labels (M1, M11, etc) — amber tone matching casing",
+      "data": {
+        "values": [
+          {
+            "lon": 144.92,
+            "lat": -37.825,
+            "label": "M1"
+          },
+          {
+            "lon": 144.88,
+            "lat": -38.305,
+            "label": "M11"
+          },
+          {
+            "lon": 145.047,
+            "lat": -38.045,
+            "label": "Nepean Hwy"
+          },
+          {
+            "lon": 144.53,
+            "lat": -38.16,
+            "label": "Bellarine Hwy"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 9,
+        "fontWeight": 700,
+        "fill": "#a06840",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Beach circles — white halo",
+      "data": {
+        "url": "data/beach_summary.csv",
+        "format": {
+          "parse": {
+            "latitude": "number",
+            "longitude": "number",
+            "avg_enterococci": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "fill": "white",
+        "stroke": "white",
+        "strokeWidth": 2.2,
+        "opacity": 0.85
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "avg_enterococci",
+          "type": "quantitative",
+          "scale": {
+            "type": "sqrt",
+            "domain": [
+              10,
+              450
+            ],
+            "range": [
+              70,
+              720
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "Beach circles — proportional symbols sized by long-term mean enterococci",
+      "data": {
+        "url": "data/beach_summary.csv",
+        "format": {
+          "parse": {
+            "latitude": "number",
+            "longitude": "number",
+            "avg_enterococci": "number",
+            "samples": "number",
+            "poor_pct": "number",
+            "median_enterococci": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "fill": "#1e4a6b",
+        "stroke": "white",
+        "strokeWidth": 1.4,
+        "fillOpacity": 0.88
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "avg_enterococci",
+          "type": "quantitative",
+          "title": "Avg enterococci (orgs/100mL)",
+          "scale": {
+            "type": "sqrt",
+            "domain": [
+              10,
+              450
+            ],
+            "range": [
+              70,
+              720
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 560,
+            "legendY": 462,
+            "values": [
+              35,
+              100,
+              200,
+              400
+            ],
+            "format": ".0f",
+            "fillColor": "rgba(253,250,243,0.94)",
+            "padding": 10,
+            "cornerRadius": 4,
+            "symbolFillColor": "#1e4a6b",
+            "symbolStrokeColor": "white"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "site_name",
+            "title": "Beach"
+          },
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "avg_enterococci",
+            "title": "Avg enterococci",
+            "format": ".0f"
+          },
+          {
+            "field": "median_enterococci",
+            "title": "Median"
+          },
+          {
+            "field": "poor_pct",
+            "title": "% Poor",
+            "format": ".1f"
+          },
+          {
+            "field": "samples",
+            "title": "Routine samples"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Top-3 worst inline labels (>=350) — cream halo",
+      "data": {
+        "url": "data/beach_summary.csv",
+        "format": {
+          "parse": {
+            "latitude": "number",
+            "longitude": "number",
+            "avg_enterococci": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.avg_enterococci >= 350"
+        },
+        {
+          "calculate": "datum.site_name == 'Frankston Coast Guard' ? 'Frankston CG · 439' : datum.site_name == 'Carrum Surf Life Saving Club' ? 'Carrum SLC · 359' : datum.site_name == 'Port Melbourne' ? 'Port Melbourne · 368' : datum.site_name",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 11,
+        "fontWeight": 800,
+        "align": "right",
+        "baseline": "middle",
+        "dx": -22,
+        "dy": -10,
+        "fill": "#1a1a1a",
+        "stroke": "#ffffff",
+        "strokeWidth": 3.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Top-3 worst inline labels — foreground",
+      "data": {
+        "url": "data/beach_summary.csv",
+        "format": {
+          "parse": {
+            "latitude": "number",
+            "longitude": "number",
+            "avg_enterococci": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.avg_enterococci >= 350"
+        },
+        {
+          "calculate": "datum.site_name == 'Frankston Coast Guard' ? 'Frankston CG · 439' : datum.site_name == 'Carrum Surf Life Saving Club' ? 'Carrum SLC · 359' : datum.site_name == 'Port Melbourne' ? 'Port Melbourne · 368' : datum.site_name",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 11,
+        "fontWeight": 800,
+        "align": "right",
+        "baseline": "middle",
+        "dx": -22,
+        "dy": -10,
+        "fill": "#1a1a1a"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "N compass",
+      "data": {
+        "values": [
+          {
+            "lon": 144.43,
+            "lat": -38.46,
+            "label": "N"
+          },
+          {
+            "lon": 144.43,
+            "lat": -38.435,
+            "label": "↑"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "fill": "#5a5a5a"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "description": "Scale bar — main rule",
+      "data": {
+        "values": [
+          {
+            "lon": 145.02,
+            "lat": -38.468
+          },
+          {
+            "lon": 145.14,
+            "lat": -38.468
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#5a5a5a"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "description": "Scale bar — left tick",
+      "data": {
+        "values": [
+          {
+            "lon": 145.02,
+            "lat": -38.452
+          },
+          {
+            "lon": 145.02,
+            "lat": -38.468
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#5a5a5a"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "description": "Scale bar — right tick",
+      "data": {
+        "values": [
+          {
+            "lon": 145.14,
+            "lat": -38.452
+          },
+          {
+            "lon": 145.14,
+            "lat": -38.468
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#5a5a5a"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "description": "Scale bar — label",
+      "data": {
+        "values": [
+          {
+            "lon": 145.08,
+            "lat": -38.48,
+            "label": "10 km"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": 700,
+        "fill": "#3a3a3a"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ]
+}

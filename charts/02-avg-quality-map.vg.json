@@ -1,0 +1,546 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Unfolding the Bay: A Skyline of Beaches",
+    "subtitle": [
+      "Same 36 beaches as Chart 1, arranged geographically.",
+      "Dashed lines mark EPA Poor (200) and Good (35)."
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Playfair Display, Georgia, serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#6a6a6a",
+    "subtitleFont": "Inter, sans-serif",
+    "offset": 12
+  },
+  "width": 720,
+  "height": 460,
+  "background": "transparent",
+  "padding": {
+    "top": 8,
+    "left": 8,
+    "right": 8,
+    "bottom": 8
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "labelColor": "#3a3a3a",
+      "domainColor": "#bbb",
+      "tickColor": "#bbb",
+      "gridColor": "#e8e2d0"
+    }
+  },
+  "data": {
+    "url": "data/beach_radial.csv",
+    "format": {
+      "parse": {
+        "order": "number",
+        "avg_enterococci": "number",
+        "poor_pct": "number",
+        "samples": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "avg_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "avg_enterococci",
+          "order": "descending"
+        }
+      ]
+    }
+  ],
+  "layer": [
+    {
+      "description": "Region color background bands",
+      "transform": [
+        {
+          "calculate": "datum.region == 'Inner North' ? 0 : datum.region == 'Eastern Bayside' ? 1 : datum.region == 'Mornington Peninsula' ? 2 : 3",
+          "as": "region_idx"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "opacity": 0.1,
+        "stroke": null,
+        "yOffset": 0
+      },
+      "encoding": {
+        "x": {
+          "field": "order",
+          "type": "ordinal",
+          "axis": null,
+          "sort": {
+            "field": "order"
+          },
+          "scale": {
+            "paddingOuter": 0,
+            "paddingInner": 0
+          }
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": 460
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Western Shore",
+              "Mornington Peninsula",
+              "Eastern Bayside",
+              "Inner North"
+            ],
+            "range": [
+              "#3a7ca5",
+              "#7ba7c7",
+              "#d4a23a",
+              "#c73e3e"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "EPA Good 35 line",
+      "data": {
+        "values": [
+          {
+            "y": 35
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "stroke": "#888",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 0.9
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              500
+            ]
+          },
+          "axis": {
+            "title": "Average enterococci (orgs / 100mL, routine samples)",
+            "values": [
+              0,
+              35,
+              100,
+              200,
+              300,
+              400,
+              500
+            ],
+            "grid": true,
+            "labelPadding": 6,
+            "titlePadding": 8
+          }
+        }
+      }
+    },
+    {
+      "description": "EPA Poor 200 line",
+      "data": {
+        "values": [
+          {
+            "y": 200
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "stroke": "#c73e3e",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 1.0,
+        "strokeOpacity": 0.7
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "description": "EPA inline labels",
+      "data": {
+        "values": [
+          {
+            "y": 35,
+            "label": "EPA Good",
+            "color": "#666"
+          },
+          {
+            "y": 200,
+            "label": "EPA Poor",
+            "color": "#a02828"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 9,
+        "fontStyle": "italic",
+        "align": "right",
+        "baseline": "bottom",
+        "dy": -3,
+        "x": "width",
+        "dx": -4
+      },
+      "encoding": {
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "field": "color",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "36 vertical bars",
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 0.78
+        },
+        "stroke": "#ffffff",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "field": "order",
+          "type": "ordinal",
+          "title": null,
+          "axis": null,
+          "sort": {
+            "field": "order"
+          }
+        },
+        "y": {
+          "field": "avg_enterococci",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Western Shore",
+              "Mornington Peninsula",
+              "Eastern Bayside",
+              "Inner North"
+            ],
+            "range": [
+              "#3a7ca5",
+              "#7ba7c7",
+              "#d4a23a",
+              "#c73e3e"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "site_name",
+            "title": "Beach"
+          },
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "avg_enterococci",
+            "title": "Avg enterococci",
+            "format": ".1f"
+          },
+          {
+            "field": "poor_pct",
+            "title": "% Poor",
+            "format": ".1f"
+          },
+          {
+            "field": "samples",
+            "title": "Samples"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Top-3 worst value labels above bar",
+      "transform": [
+        {
+          "filter": "datum.avg_rank <= 3"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#1a1a1a",
+        "baseline": "bottom",
+        "dy": -4
+      },
+      "encoding": {
+        "x": {
+          "field": "order",
+          "type": "ordinal",
+          "sort": {
+            "field": "order"
+          }
+        },
+        "y": {
+          "field": "avg_enterococci",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "avg_enterococci",
+          "format": ".0f",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "description": "Top-3 worst beach name vertical labels",
+      "transform": [
+        {
+          "filter": "datum.avg_rank <= 3"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": 600,
+        "color": "#3a3a3a",
+        "baseline": "bottom",
+        "dy": -22,
+        "angle": 270,
+        "align": "left"
+      },
+      "encoding": {
+        "x": {
+          "field": "order",
+          "type": "ordinal",
+          "sort": {
+            "field": "order"
+          }
+        },
+        "y": {
+          "field": "avg_enterococci",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "name_short"
+        }
+      }
+    },
+    {
+      "description": "Region label — Inner North",
+      "data": {
+        "values": [
+          {
+            "order": 4,
+            "label": "INNER NORTH",
+            "color": "#a02828"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": 700,
+        "letterSpacing": 1.6,
+        "baseline": "top",
+        "dy": 6
+      },
+      "encoding": {
+        "x": {
+          "field": "order",
+          "type": "ordinal",
+          "sort": {
+            "field": "order"
+          }
+        },
+        "y": {
+          "value": 0
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "field": "color",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "Region label — Eastern Bayside",
+      "data": {
+        "values": [
+          {
+            "order": 14,
+            "label": "EASTERN BAYSIDE",
+            "color": "#a07820"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": 700,
+        "letterSpacing": 1.6,
+        "baseline": "top",
+        "dy": 6
+      },
+      "encoding": {
+        "x": {
+          "field": "order",
+          "type": "ordinal",
+          "sort": {
+            "field": "order"
+          }
+        },
+        "y": {
+          "value": 0
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "field": "color",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "Region label — Mornington Peninsula",
+      "data": {
+        "values": [
+          {
+            "order": 25,
+            "label": "MORNINGTON PENINSULA",
+            "color": "#1e4a6b"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": 700,
+        "letterSpacing": 1.6,
+        "baseline": "top",
+        "dy": 6
+      },
+      "encoding": {
+        "x": {
+          "field": "order",
+          "type": "ordinal",
+          "sort": {
+            "field": "order"
+          }
+        },
+        "y": {
+          "value": 0
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "field": "color",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "Region label — Western Shore",
+      "data": {
+        "values": [
+          {
+            "order": 32,
+            "label": "WESTERN SHORE",
+            "color": "#1e4a6b"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": 700,
+        "letterSpacing": 1.6,
+        "baseline": "top",
+        "dy": 6
+      },
+      "encoding": {
+        "x": {
+          "field": "order",
+          "type": "ordinal",
+          "sort": {
+            "field": "order"
+          }
+        },
+        "y": {
+          "value": 0
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "field": "color",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
+      }
+    }
+  ]
+}

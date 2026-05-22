@@ -1,0 +1,1020 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "When Was the Bay at Its Worst?",
+    "subtitle": [
+      "Year × month matrix with marginal averages.",
+      "Grey cells have fewer than 3 samples."
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Playfair Display, Georgia, serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#6a6a6a",
+    "subtitleFont": "Inter, sans-serif",
+    "offset": 12
+  },
+  "background": "transparent",
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#3a3a3a",
+      "labelFontWeight": 500,
+      "domain": false,
+      "ticks": false
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    }
+  },
+  "datasets": {
+    "month_grid": [
+      {
+        "month": 1,
+        "metric": "Month mean"
+      },
+      {
+        "month": 2,
+        "metric": "Month mean"
+      },
+      {
+        "month": 3,
+        "metric": "Month mean"
+      },
+      {
+        "month": 4,
+        "metric": "Month mean"
+      },
+      {
+        "month": 5,
+        "metric": "Month mean"
+      },
+      {
+        "month": 6,
+        "metric": "Month mean"
+      },
+      {
+        "month": 7,
+        "metric": "Month mean"
+      },
+      {
+        "month": 8,
+        "metric": "Month mean"
+      },
+      {
+        "month": 9,
+        "metric": "Month mean"
+      },
+      {
+        "month": 10,
+        "metric": "Month mean"
+      },
+      {
+        "month": 11,
+        "metric": "Month mean"
+      },
+      {
+        "month": 12,
+        "metric": "Month mean"
+      }
+    ],
+    "year_grid": [
+      {
+        "year": 2020,
+        "metric": "Year mean"
+      },
+      {
+        "year": 2021,
+        "metric": "Year mean"
+      },
+      {
+        "year": 2022,
+        "metric": "Year mean"
+      },
+      {
+        "year": 2023,
+        "metric": "Year mean"
+      },
+      {
+        "year": 2024,
+        "metric": "Year mean"
+      },
+      {
+        "year": 2025,
+        "metric": "Year mean"
+      }
+    ],
+    "calendar_grid": [
+      {
+        "year": 2020,
+        "month": 1
+      },
+      {
+        "year": 2020,
+        "month": 2
+      },
+      {
+        "year": 2020,
+        "month": 3
+      },
+      {
+        "year": 2020,
+        "month": 4
+      },
+      {
+        "year": 2020,
+        "month": 5
+      },
+      {
+        "year": 2020,
+        "month": 6
+      },
+      {
+        "year": 2020,
+        "month": 7
+      },
+      {
+        "year": 2020,
+        "month": 8
+      },
+      {
+        "year": 2020,
+        "month": 9
+      },
+      {
+        "year": 2020,
+        "month": 10
+      },
+      {
+        "year": 2020,
+        "month": 11
+      },
+      {
+        "year": 2020,
+        "month": 12
+      },
+      {
+        "year": 2021,
+        "month": 1
+      },
+      {
+        "year": 2021,
+        "month": 2
+      },
+      {
+        "year": 2021,
+        "month": 3
+      },
+      {
+        "year": 2021,
+        "month": 4
+      },
+      {
+        "year": 2021,
+        "month": 5
+      },
+      {
+        "year": 2021,
+        "month": 6
+      },
+      {
+        "year": 2021,
+        "month": 7
+      },
+      {
+        "year": 2021,
+        "month": 8
+      },
+      {
+        "year": 2021,
+        "month": 9
+      },
+      {
+        "year": 2021,
+        "month": 10
+      },
+      {
+        "year": 2021,
+        "month": 11
+      },
+      {
+        "year": 2021,
+        "month": 12
+      },
+      {
+        "year": 2022,
+        "month": 1
+      },
+      {
+        "year": 2022,
+        "month": 2
+      },
+      {
+        "year": 2022,
+        "month": 3
+      },
+      {
+        "year": 2022,
+        "month": 4
+      },
+      {
+        "year": 2022,
+        "month": 5
+      },
+      {
+        "year": 2022,
+        "month": 6
+      },
+      {
+        "year": 2022,
+        "month": 7
+      },
+      {
+        "year": 2022,
+        "month": 8
+      },
+      {
+        "year": 2022,
+        "month": 9
+      },
+      {
+        "year": 2022,
+        "month": 10
+      },
+      {
+        "year": 2022,
+        "month": 11
+      },
+      {
+        "year": 2022,
+        "month": 12
+      },
+      {
+        "year": 2023,
+        "month": 1
+      },
+      {
+        "year": 2023,
+        "month": 2
+      },
+      {
+        "year": 2023,
+        "month": 3
+      },
+      {
+        "year": 2023,
+        "month": 4
+      },
+      {
+        "year": 2023,
+        "month": 5
+      },
+      {
+        "year": 2023,
+        "month": 6
+      },
+      {
+        "year": 2023,
+        "month": 7
+      },
+      {
+        "year": 2023,
+        "month": 8
+      },
+      {
+        "year": 2023,
+        "month": 9
+      },
+      {
+        "year": 2023,
+        "month": 10
+      },
+      {
+        "year": 2023,
+        "month": 11
+      },
+      {
+        "year": 2023,
+        "month": 12
+      },
+      {
+        "year": 2024,
+        "month": 1
+      },
+      {
+        "year": 2024,
+        "month": 2
+      },
+      {
+        "year": 2024,
+        "month": 3
+      },
+      {
+        "year": 2024,
+        "month": 4
+      },
+      {
+        "year": 2024,
+        "month": 5
+      },
+      {
+        "year": 2024,
+        "month": 6
+      },
+      {
+        "year": 2024,
+        "month": 7
+      },
+      {
+        "year": 2024,
+        "month": 8
+      },
+      {
+        "year": 2024,
+        "month": 9
+      },
+      {
+        "year": 2024,
+        "month": 10
+      },
+      {
+        "year": 2024,
+        "month": 11
+      },
+      {
+        "year": 2024,
+        "month": 12
+      },
+      {
+        "year": 2025,
+        "month": 1
+      },
+      {
+        "year": 2025,
+        "month": 2
+      },
+      {
+        "year": 2025,
+        "month": 3
+      },
+      {
+        "year": 2025,
+        "month": 4
+      },
+      {
+        "year": 2025,
+        "month": 5
+      },
+      {
+        "year": 2025,
+        "month": 6
+      },
+      {
+        "year": 2025,
+        "month": 7
+      },
+      {
+        "year": 2025,
+        "month": 8
+      },
+      {
+        "year": 2025,
+        "month": 9
+      },
+      {
+        "year": 2025,
+        "month": 10
+      },
+      {
+        "year": 2025,
+        "month": 11
+      },
+      {
+        "year": 2025,
+        "month": 12
+      }
+    ]
+  },
+  "vconcat": [
+    {
+      "spacing": 6,
+      "hconcat": [
+        {
+          "width": 540,
+          "height": 34,
+          "layer": [
+            {
+              "data": {
+                "name": "month_grid"
+              },
+              "mark": {
+                "type": "rect",
+                "fill": "#d8d8d2",
+                "stroke": "#ffffff",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "month",
+                  "type": "ordinal",
+                  "title": null,
+                  "axis": {
+                    "labelExpr": "['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][datum.value-1]",
+                    "labelAngle": 0,
+                    "orient": "top",
+                    "labelPadding": 8
+                  }
+                },
+                "y": {
+                  "field": "metric",
+                  "type": "nominal",
+                  "axis": null
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/year_month_calendar.csv",
+                "format": {
+                  "parse": {
+                    "year": "number",
+                    "month": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "filter": "datum.samples >= 3"
+                },
+                {
+                  "aggregate": [
+                    {
+                      "op": "mean",
+                      "field": "poor_pct",
+                      "as": "poor_pct"
+                    },
+                    {
+                      "op": "sum",
+                      "field": "samples",
+                      "as": "samples"
+                    }
+                  ],
+                  "groupby": [
+                    "month"
+                  ]
+                },
+                {
+                  "calculate": "'Month mean'",
+                  "as": "metric"
+                }
+              ],
+              "mark": {
+                "type": "rect",
+                "stroke": "#ffffff",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "x": {
+                  "field": "month",
+                  "type": "ordinal",
+                  "title": null
+                },
+                "y": {
+                  "field": "metric",
+                  "type": "nominal",
+                  "axis": null
+                },
+                "color": {
+                  "field": "poor_pct",
+                  "type": "quantitative",
+                  "scale": {
+                    "type": "threshold",
+                    "domain": [
+                      5,
+                      15,
+                      25
+                    ],
+                    "range": [
+                      "#d9e7ef",
+                      "#d4a23a",
+                      "#d4762a",
+                      "#c73e3e"
+                    ]
+                  },
+                  "legend": null
+                },
+                "tooltip": [
+                  {
+                    "field": "month",
+                    "title": "Month"
+                  },
+                  {
+                    "field": "poor_pct",
+                    "title": "Mean % Poor",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "samples",
+                    "title": "Routine samples"
+                  }
+                ]
+              }
+            },
+            {
+              "data": {
+                "url": "data/year_month_calendar.csv",
+                "format": {
+                  "parse": {
+                    "year": "number",
+                    "month": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "filter": "datum.samples >= 3"
+                },
+                {
+                  "aggregate": [
+                    {
+                      "op": "mean",
+                      "field": "poor_pct",
+                      "as": "poor_pct"
+                    }
+                  ],
+                  "groupby": [
+                    "month"
+                  ]
+                },
+                {
+                  "calculate": "'Month mean'",
+                  "as": "metric"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "font": "Inter",
+                "fontSize": 10,
+                "fontWeight": 700
+              },
+              "encoding": {
+                "x": {
+                  "field": "month",
+                  "type": "ordinal"
+                },
+                "y": {
+                  "field": "metric",
+                  "type": "nominal"
+                },
+                "text": {
+                  "field": "poor_pct",
+                  "format": ".0f",
+                  "type": "quantitative"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.poor_pct >= 25",
+                    "value": "white"
+                  },
+                  "value": "#3a3a3a"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "width": 80,
+          "height": 34,
+          "data": {
+            "values": [
+              {
+                "label": "Year mean",
+                "metric": "Year mean",
+                "row": "Month mean"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "font": "Inter",
+            "fontSize": 10,
+            "fontWeight": 700,
+            "color": "#666"
+          },
+          "encoding": {
+            "x": {
+              "field": "metric",
+              "type": "nominal",
+              "axis": null
+            },
+            "y": {
+              "field": "row",
+              "type": "nominal",
+              "axis": null
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "spacing": 6,
+      "hconcat": [
+        {
+          "width": 540,
+          "height": 280,
+          "layer": [
+            {
+              "data": {
+                "name": "calendar_grid"
+              },
+              "mark": {
+                "type": "rect",
+                "fill": "#d8d8d2",
+                "stroke": "#ffffff",
+                "strokeWidth": 2.5
+              },
+              "encoding": {
+                "x": {
+                  "field": "month",
+                  "type": "ordinal",
+                  "title": null,
+                  "axis": null
+                },
+                "y": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "title": null,
+                  "sort": "descending",
+                  "axis": {
+                    "labelPadding": 8
+                  }
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/year_month_calendar.csv",
+                "format": {
+                  "parse": {
+                    "year": "number",
+                    "month": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "filter": "datum.samples >= 3"
+                }
+              ],
+              "mark": {
+                "type": "rect",
+                "stroke": "#ffffff",
+                "strokeWidth": 2.5
+              },
+              "encoding": {
+                "x": {
+                  "field": "month",
+                  "type": "ordinal",
+                  "title": null,
+                  "axis": null
+                },
+                "y": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "title": null,
+                  "sort": "descending",
+                  "axis": {
+                    "labelPadding": 8
+                  }
+                },
+                "color": {
+                  "field": "poor_pct",
+                  "type": "quantitative",
+                  "title": "% Poor",
+                  "scale": {
+                    "type": "threshold",
+                    "domain": [
+                      5,
+                      15,
+                      25
+                    ],
+                    "range": [
+                      "#d9e7ef",
+                      "#d4a23a",
+                      "#d4762a",
+                      "#c73e3e"
+                    ]
+                  },
+                  "legend": {
+                    "orient": "bottom",
+                    "direction": "horizontal",
+                    "offset": 30
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "year",
+                    "title": "Year"
+                  },
+                  {
+                    "field": "month",
+                    "title": "Month"
+                  },
+                  {
+                    "field": "poor_pct",
+                    "title": "% Poor",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "avg_enterococci",
+                    "title": "Avg enterococci",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "samples",
+                    "title": "Routine samples"
+                  }
+                ]
+              }
+            },
+            {
+              "data": {
+                "url": "data/year_month_calendar.csv",
+                "format": {
+                  "parse": {
+                    "year": "number",
+                    "month": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "filter": "datum.samples < 3"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "font": "Inter",
+                "fontSize": 9,
+                "fontWeight": 700,
+                "color": "#666"
+              },
+              "encoding": {
+                "x": {
+                  "field": "month",
+                  "type": "ordinal"
+                },
+                "y": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": "descending"
+                },
+                "text": {
+                  "value": "n<3"
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/year_month_calendar.csv",
+                "format": {
+                  "parse": {
+                    "year": "number",
+                    "month": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "filter": "datum.samples >= 3"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "font": "Inter",
+                "fontSize": 11,
+                "fontWeight": 600
+              },
+              "encoding": {
+                "x": {
+                  "field": "month",
+                  "type": "ordinal"
+                },
+                "y": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": "descending"
+                },
+                "text": {
+                  "field": "poor_pct",
+                  "format": ".0f",
+                  "type": "quantitative"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.poor_pct >= 25",
+                    "value": "white"
+                  },
+                  "value": "#3a3a3a"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "width": 80,
+          "height": 280,
+          "layer": [
+            {
+              "data": {
+                "name": "year_grid"
+              },
+              "mark": {
+                "type": "rect",
+                "fill": "#d8d8d2",
+                "stroke": "#ffffff",
+                "strokeWidth": 2.5
+              },
+              "encoding": {
+                "x": {
+                  "field": "metric",
+                  "type": "nominal",
+                  "axis": null
+                },
+                "y": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "title": null,
+                  "sort": "descending",
+                  "axis": null
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/year_month_calendar.csv",
+                "format": {
+                  "parse": {
+                    "year": "number",
+                    "month": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "filter": "datum.samples >= 3"
+                },
+                {
+                  "aggregate": [
+                    {
+                      "op": "mean",
+                      "field": "poor_pct",
+                      "as": "poor_pct"
+                    },
+                    {
+                      "op": "sum",
+                      "field": "samples",
+                      "as": "samples"
+                    }
+                  ],
+                  "groupby": [
+                    "year"
+                  ]
+                },
+                {
+                  "calculate": "'Year mean'",
+                  "as": "metric"
+                }
+              ],
+              "mark": {
+                "type": "rect",
+                "stroke": "#ffffff",
+                "strokeWidth": 2.5
+              },
+              "encoding": {
+                "x": {
+                  "field": "metric",
+                  "type": "nominal",
+                  "axis": null
+                },
+                "y": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": "descending",
+                  "axis": null
+                },
+                "color": {
+                  "field": "poor_pct",
+                  "type": "quantitative",
+                  "scale": {
+                    "type": "threshold",
+                    "domain": [
+                      5,
+                      15,
+                      25
+                    ],
+                    "range": [
+                      "#d9e7ef",
+                      "#d4a23a",
+                      "#d4762a",
+                      "#c73e3e"
+                    ]
+                  },
+                  "legend": null
+                },
+                "tooltip": [
+                  {
+                    "field": "year",
+                    "title": "Year"
+                  },
+                  {
+                    "field": "poor_pct",
+                    "title": "Mean % Poor",
+                    "format": ".1f"
+                  },
+                  {
+                    "field": "samples",
+                    "title": "Routine samples"
+                  }
+                ]
+              }
+            },
+            {
+              "data": {
+                "url": "data/year_month_calendar.csv",
+                "format": {
+                  "parse": {
+                    "year": "number",
+                    "month": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "filter": "datum.samples >= 3"
+                },
+                {
+                  "aggregate": [
+                    {
+                      "op": "mean",
+                      "field": "poor_pct",
+                      "as": "poor_pct"
+                    }
+                  ],
+                  "groupby": [
+                    "year"
+                  ]
+                },
+                {
+                  "calculate": "'Year mean'",
+                  "as": "metric"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "font": "Inter",
+                "fontSize": 10,
+                "fontWeight": 700
+              },
+              "encoding": {
+                "x": {
+                  "field": "metric",
+                  "type": "nominal"
+                },
+                "y": {
+                  "field": "year",
+                  "type": "ordinal",
+                  "sort": "descending"
+                },
+                "text": {
+                  "field": "poor_pct",
+                  "format": ".0f",
+                  "type": "quantitative"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.poor_pct >= 25",
+                    "value": "white"
+                  },
+                  "value": "#3a3a3a"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

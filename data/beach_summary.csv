@@ -1,0 +1,37 @@
+site_id,site_name,region,water_body,latitude,longitude,avg_enterococci,median_enterococci,max_enterococci,samples,poor_pct,good_pct
+99020,Port Melbourne,Inner North,Port Phillip Bay,-37.843866,144.937766,367.63,30.0,17000.0,150,18.67,56.0
+99060,Hampton,Inner North,Port Phillip Bay,-37.938,144.997116,114.13,10.0,5500.0,149,11.41,73.15
+99070,Half Moon Bay,Eastern Bayside,Port Phillip Bay,-37.968566,145.011066,60.14,20.0,1700.0,149,6.04,68.46
+99100,Mentone,Eastern Bayside,Port Phillip Bay,-37.9891,145.058733,163.22,36.0,1800.0,150,19.33,50.0
+99160,Seaford,Eastern Bayside,Port Phillip Bay,-38.103316,145.12455,92.6,20.0,4400.0,150,10.67,68.67
+99170,Frankston Surf Life Saving Club,Eastern Bayside,Port Phillip Bay,-38.142333,145.11854,282.43,41.0,8200.0,152,22.37,46.05
+99240,Safety Beach,Mornington Peninsula,Port Phillip Bay,-38.311266,144.992366,84.58,10.0,2600.0,149,8.05,76.51
+99280,Blairgowrie,Mornington Peninsula,Port Phillip Bay,-38.36095,144.781716,178.11,20.0,10000.0,149,8.05,66.44
+99290,Sorrento,Mornington Peninsula,Port Phillip Bay,-38.343516,144.7528,57.69,10.0,1200.0,150,6.67,71.33
+99500,The Dell,Western Shore,Port Phillip Bay,-38.152496,144.563007,131.77,10.0,4400.0,154,8.44,64.29
+99510,Eastern Beach,Western Shore,Port Phillip Bay,-38.146666,144.37085,106.43,31.0,3100.0,155,10.97,57.42
+99520,Portsea,Mornington Peninsula,Port Phillip Bay,-38.318983,144.713816,12.85,5.0,150.0,142,0.0,94.37
+99530,Rye,Mornington Peninsula,Port Phillip Bay,-38.370183,144.8321,125.09,30.0,2900.0,151,14.57,56.95
+99550,Dromana,Mornington Peninsula,Port Phillip Bay,-38.332033,144.964633,132.91,10.0,3700.0,150,11.33,66.0
+99580,Canadian Bay,Eastern Bayside,Port Phillip Bay,-38.17175,145.083083,158.75,20.0,4600.0,151,13.91,64.9
+99590,Frankston Coast Guard,Eastern Bayside,Port Phillip Bay,-38.147043,145.115502,439.06,41.0,24000.0,149,15.44,48.32
+99620,Mordialloc,Eastern Bayside,Port Phillip Bay,-38.008817,145.0833,129.25,20.0,4600.0,149,13.42,63.76
+99630,Sandringham,Eastern Bayside,Port Phillip Bay,-37.950796,145.001354,97.74,10.0,5200.0,147,6.12,76.19
+99650,Elwood,Inner North,Port Phillip Bay,-37.889061,144.983613,115.11,15.0,1900.0,148,12.16,64.19
+99660,St Kilda,Inner North,Port Phillip Bay,-37.868166,144.974033,272.64,41.0,4400.0,151,19.87,47.68
+99690,Sandridge,Inner North,Port Phillip Bay,-37.840033,144.9164124,168.7,20.0,6100.0,149,14.09,64.43
+99700,Williamstown,Inner North,Port Phillip Bay,-37.867962,144.893233,101.68,10.0,4900.0,149,10.07,70.47
+99710,Altona,Inner North,Port Phillip Bay,-37.871066,144.83125,119.35,10.0,4600.0,150,8.67,73.33
+99730,Werribee Sth,Western Shore,Port Phillip Bay,-37.974916,144.692783,118.61,20.0,6900.0,153,10.46,67.97
+99761,Portarlington Beach (new site),Western Shore,Port Phillip Bay,-38.112672,144.650817,54.22,10.0,1500.0,179,4.47,74.86
+99770,St Leonards,Western Shore,Port Phillip Bay,-38.170783,144.719166,62.16,10.0,1000.0,153,5.88,68.63
+99990,Beaumaris,Eastern Bayside,Port Phillip Bay,-37.994966,145.03275,81.9,20.0,1600.0,149,9.4,69.13
+99991,Brighton Life Saving Club,Inner North,Port Phillip Bay,-37.917297,144.986083,89.49,10.0,2600.0,136,5.15,69.85
+99992,Mornington Life Saving Club,Mornington Peninsula,Port Phillip Bay,-38.21363,145.044181,324.5,20.0,8200.0,153,12.42,59.48
+99993,Rosebud Life Saving Club,Mornington Peninsula,Port Phillip Bay,-38.347306,144.92806,102.01,10.0,3100.0,150,8.67,70.0
+99994,Mt Martha Life Saving Club,Mornington Peninsula,Port Phillip Bay,-38.265248,145.013913,68.51,5.0,3100.0,148,5.41,79.73
+99995,Carrum Surf Life Saving Club,Eastern Bayside,Port Phillip Bay,-38.076393,145.12064,359.46,20.0,10000.0,153,15.03,62.75
+99996,Aspendale Life Saving Club,Eastern Bayside,Port Phillip Bay,-38.028173,145.100253,83.07,10.0,1900.0,150,7.33,76.0
+99997,South Melbourne Life Saving Club,Inner North,Port Phillip Bay,-37.847497,144.94625,92.86,10.0,2800.0,149,10.07,71.81
+99998,Santa Casa,Western Shore,Port Phillip Bay,-38.272293,144.648588,19.16,5.0,1300.0,153,0.65,92.81
+99999,Black Rock Life Saving Club,Eastern Bayside,Port Phillip Bay,-37.974777,145.014242,41.77,10.0,1700.0,147,2.72,80.27

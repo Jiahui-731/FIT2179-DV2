@@ -1,0 +1,5 @@
+region,beach_count,samples,avg_enterococci,median_enterococci,poor_pct
+Eastern Bayside,12,1796,166.53,20.0,11.86
+Inner North,9,1331,161.2,10.0,12.32
+Mornington Peninsula,9,1342,121.86,10.0,8.42
+Western Shore,6,947,81.4,10.0,6.76

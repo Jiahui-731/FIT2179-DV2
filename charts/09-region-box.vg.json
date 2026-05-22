@@ -1,0 +1,286 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where You Swim Matters More Than When",
+    "subtitle": [
+      "Bar = regional mean; dots = individual beaches, 2020-2025.",
+      "Western Shore is twice as clean as Inner North."
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Playfair Display, Georgia, serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#6a6a6a",
+    "subtitleFont": "Inter, sans-serif",
+    "offset": 12
+  },
+  "width": 580,
+  "height": 260,
+  "background": "transparent",
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#3a3a3a",
+      "domainColor": "#bbb",
+      "tickColor": "#bbb",
+      "gridColor": "#e8e2d0"
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/region_summary.csv"
+      },
+      "transform": [
+        {
+          "calculate": "indexof(['Western Shore','Mornington Peninsula','Eastern Bayside','Inner North'], datum.region)",
+          "as": "order"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": {
+          "band": 0.5
+        },
+        "opacity": 0.55
+      },
+      "encoding": {
+        "y": {
+          "field": "region",
+          "type": "ordinal",
+          "title": null,
+          "sort": {
+            "field": "order"
+          },
+          "axis": {
+            "labelPadding": 12,
+            "labelFontSize": 13,
+            "labelFontWeight": 500
+          }
+        },
+        "x": {
+          "field": "avg_enterococci",
+          "type": "quantitative",
+          "title": "Average enterococci (orgs / 100mL, routine samples)",
+          "scale": {
+            "domain": [
+              0,
+              600
+            ]
+          },
+          "axis": {
+            "grid": true,
+            "format": ".0f",
+            "values": [
+              0,
+              35,
+              100,
+              200,
+              400,
+              600
+            ]
+          }
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Western Shore",
+              "Mornington Peninsula",
+              "Eastern Bayside",
+              "Inner North"
+            ],
+            "range": [
+              "#3a7ca5",
+              "#7ba7c7",
+              "#d4a23a",
+              "#c73e3e"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "beach_count",
+            "title": "Beaches"
+          },
+          {
+            "field": "samples",
+            "title": "Total samples"
+          },
+          {
+            "field": "avg_enterococci",
+            "title": "Region avg",
+            "format": ".1f"
+          },
+          {
+            "field": "median_enterococci",
+            "title": "Region median",
+            "format": ".1f"
+          },
+          {
+            "field": "poor_pct",
+            "title": "% Poor",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Beach-level dots — strip plot per region",
+      "data": {
+        "url": "data/beach_summary.csv"
+      },
+      "transform": [
+        {
+          "calculate": "indexof(['Western Shore','Mornington Peninsula','Eastern Bayside','Inner North'], datum.region)",
+          "as": "order"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 90,
+        "fill": "#1a1a1a",
+        "fillOpacity": 0.78,
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "region",
+          "type": "ordinal",
+          "sort": {
+            "field": "order"
+          }
+        },
+        "x": {
+          "field": "avg_enterococci",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "site_name",
+            "title": "Beach"
+          },
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "avg_enterococci",
+            "title": "Avg",
+            "format": ".1f"
+          },
+          {
+            "field": "samples",
+            "title": "Samples"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Region mean value labels",
+      "data": {
+        "url": "data/region_summary.csv"
+      },
+      "transform": [
+        {
+          "calculate": "indexof(['Western Shore','Mornington Peninsula','Eastern Bayside','Inner North'], datum.region)",
+          "as": "order"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -8,
+        "font": "Inter",
+        "fontSize": 13,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "y": {
+          "field": "region",
+          "type": "ordinal",
+          "sort": {
+            "field": "order"
+          }
+        },
+        "x": {
+          "datum": 595,
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "avg_enterococci",
+          "format": ".0f",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Western Shore",
+              "Mornington Peninsula",
+              "Eastern Bayside",
+              "Inner North"
+            ],
+            "range": [
+              "#1e4a6b",
+              "#3a7ca5",
+              "#a07820",
+              "#a02828"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "EPA threshold rules",
+      "data": {
+        "values": [
+          {
+            "x": 35,
+            "label": "Good ≤35"
+          },
+          {
+            "x": 200,
+            "label": "Poor >200"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#888",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

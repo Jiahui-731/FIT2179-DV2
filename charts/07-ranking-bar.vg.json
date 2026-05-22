@@ -1,0 +1,253 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The Bay's Ten Dirtiest Beaches",
+    "subtitle": [
+      "The ten dirtiest beaches by long-term average, 2020-2025.",
+      "Dashed lines mark EPA Good (35) and Poor (200)."
+    ],
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Playfair Display, Georgia, serif",
+    "subtitleFontSize": 14,
+    "subtitleColor": "#6a6a6a",
+    "subtitleFont": "Inter, sans-serif",
+    "offset": 12
+  },
+  "width": 580,
+  "height": 320,
+  "background": "transparent",
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "labelColor": "#3a3a3a",
+      "domainColor": "#bbb",
+      "tickColor": "#bbb",
+      "gridColor": "#e8e2d0"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 11
+    }
+  },
+  "data": {
+    "url": "data/beach_summary.csv",
+    "format": {
+      "parse": {
+        "avg_enterococci": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.avg_enterococci >= 158.5"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": {
+          "band": 0.7
+        },
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "site_name",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "avg_enterococci",
+            "order": "descending"
+          },
+          "axis": {
+            "labelLimit": 220,
+            "labelPadding": 6
+          }
+        },
+        "x": {
+          "field": "avg_enterococci",
+          "type": "quantitative",
+          "title": "Long-term average enterococci (orgs / 100mL)",
+          "scale": {
+            "domain": [
+              0,
+              450
+            ]
+          },
+          "axis": {
+            "grid": true
+          }
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "title": "Region",
+          "scale": {
+            "domain": [
+              "Western Shore",
+              "Mornington Peninsula",
+              "Eastern Bayside",
+              "Inner North"
+            ],
+            "range": [
+              "#3a7ca5",
+              "#7ba7c7",
+              "#d4a23a",
+              "#c73e3e"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "symbolType": "square",
+            "symbolSize": 120,
+            "title": null,
+            "columns": 2,
+            "columnPadding": 18,
+            "labelLimit": 200
+          }
+        },
+        "tooltip": [
+          {
+            "field": "site_name",
+            "title": "Beach"
+          },
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "avg_enterococci",
+            "title": "Avg",
+            "format": ".1f"
+          },
+          {
+            "field": "median_enterococci",
+            "title": "Median"
+          },
+          {
+            "field": "max_enterococci",
+            "title": "Max"
+          },
+          {
+            "field": "samples",
+            "title": "Samples"
+          },
+          {
+            "field": "poor_pct",
+            "title": "% Poor",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 4,
+        "font": "Inter",
+        "fontSize": 10,
+        "color": "#3a3a3a"
+      },
+      "encoding": {
+        "y": {
+          "field": "site_name",
+          "type": "nominal",
+          "sort": {
+            "field": "avg_enterococci",
+            "order": "descending"
+          }
+        },
+        "x": {
+          "field": "avg_enterococci",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "avg_enterococci",
+          "format": ".0f"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 35,
+            "label": "EPA Good (35)"
+          },
+          {
+            "x": 200,
+            "label": "EPA Poor (200)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#666",
+        "strokeDash": [
+          3,
+          3
+        ],
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 35,
+            "label": "Good ≤ 35"
+          },
+          {
+            "x": 200,
+            "label": "Poor > 200"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 3,
+        "dy": 4,
+        "font": "Inter",
+        "fontSize": 10,
+        "fontStyle": "italic",
+        "color": "#666"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 0
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ]
+}

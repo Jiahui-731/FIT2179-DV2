@@ -1,0 +1,13 @@
+rain_yesterday_bucket,safety,n,pct,safety_idx
+Dry (0mm),Good,2406,71.2,0
+Dry (0mm),Caution,694,20.54,1
+Dry (0mm),Poor,279,8.26,2
+Light (<5mm),Good,838,64.12,0
+Light (<5mm),Caution,308,23.57,1
+Light (<5mm),Poor,161,12.32,2
+Moderate (5-20mm),Good,352,56.59,0
+Moderate (5-20mm),Caution,172,27.65,1
+Moderate (5-20mm),Poor,98,15.76,2
+Heavy (20mm+),Good,61,56.48,0
+Heavy (20mm+),Caution,31,28.7,1
+Heavy (20mm+),Poor,16,14.81,2
